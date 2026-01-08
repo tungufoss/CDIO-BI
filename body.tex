@@ -1,60 +1,232 @@
-\section{Introduction}
+\section{Introduction and Motivation}
+% TL;DR: Frames the core challenge of aligning academic assessment with
+% professional practice in industry-engaged engineering education,
+% motivating the need for authentic, competence-oriented assessment.
 
-Engineering and technology programmes increasingly emphasise the need to align student learning with professional practice. Across Europe and beyond, universities are encouraged to adopt active learning pedagogies, strengthen links with industry, and design learning environments that support the development of transferable professional competences alongside disciplinary knowledge.
+Engineering education is experiencing a sustained shift toward pedagogical approaches that seek to better align academic learning with professional practice. International initiatives such as CDIO and inter-university collaborations within alliances like Aurora have reinforced the importance of developing not only disciplinary knowledge, but also the professional competencies required for graduates to function effectively in complex, real-world environments. Parallel to this development, industry has increasingly emphasised the need for graduates who can work with authentic data, collaborate in teams, and communicate results credibly to diverse stakeholders.
 
-This paper presents a case describing the redesign of an undergraduate Business Intelligence course. The redesign was informed by the author’s transition back into higher education after an extended period in industry and draws explicitly on professional practice as a source of course structure, assessment logic, and learning activities. The aim was to make the course both pedagogically coherent and professionally relevant, while remaining feasible within the organisational constraints of university teaching.
+Despite broad agreement on these goals, meaningful alignment between academic assessment practices and workplace expectations remains a persistent challenge. In higher education, assessment is often designed to accommodate learning as a developmental process, where errors are tolerated and viewed as an integral part of learning. In contrast, professional practice—particularly in data-intensive fields such as business intelligence—prioritises reliability, reproducibility, and trustworthiness of results. These differing perspectives can become especially visible in courses that involve industry collaboration, where academic norms and professional standards intersect.
 
-\section{Context and Challenges}
+Business intelligence constitutes a particularly suitable context for examining this tension. As a field that combines data analysis, information technology, and decision support, business intelligence requires graduates to integrate technical competence with contextual understanding of organisational needs. The rapid growth of the field, both internationally and within the Icelandic labour market, has intensified demand for graduates who can navigate ambiguous problem spaces, evaluate data critically, and translate analytical insights into actionable recommendations.
 
-Business Intelligence is an interdisciplinary field that combines data analysis, information systems, and business decision-making. Graduates are expected to integrate technical competence with domain understanding, communicate results clearly, and collaborate effectively in teams. While demand for these competences is high, academic courses often focus on tools and techniques in isolation, with limited attention to professional working practices.
+This paper presents a CDIO implementation case describing the redesign of an undergraduate business intelligence course with the explicit aim of strengthening professional competence through authentic, industry-engaged assessment. The redesign was undertaken by an instructor returning to higher education after an extended period in industry, providing a perspective informed by both academic and professional practice. The course was restructured to emphasise semester-long, industry-inspired project work, supported by team-based learning and competence-oriented assessment and feedback.
 
-When the author first taught the course as a part-time instructor, it already incorporated elements of Team-Based Learning, Problem-Based Learning, and flipped classroom pedagogy. However, these approaches were only loosely connected, and the project component offered limited opportunity to engage with realistic industrial problems. Student feedback indicated high workload and weak coherence between course components, while industry collaborators reported that project outcomes had limited practical value. These observations pointed to a misalignment between learning activities, assessment, and professional expectations.
+Central to the redesign was a deliberate shift in how assessment and feedback were conceptualised and implemented. Rather than treating assessment primarily as a mechanism for grading individual performance, assessment was designed to function as an integral component of learning, guiding students toward professional standards through iterative feedback, visible work artefacts, and structured reflection. Team-based learning was employed as a foundational structure, combining individual preparation, collaborative problem-solving, and application of methods to realistic data and scenarios (\cite{michaelsen2004team,fink2003creating,sibley2014getting}). Learning activities were further informed by problem-based and experiential learning principles, emphasising student agency and learning through engagement with open-ended challenges (\cite{barrows1980problem,kolb1984experiential,Bruce2012}).
 
-\section{Pedagogical Approach}
+The redesign also drew on the LOUIS competence framework developed within the Aurora alliance, which supports the articulation of generic academic and professional competencies through explicit performance dimensions and progression levels (\cite{auroraLOUIS}). By selecting a limited set of competence domains—problem solving, information literacy, and teamwork—the course design sought to establish constructive alignment between learning outcomes, learning activities, and assessment practices (\cite{biggs_constructive,wiggins2005understanding}). This alignment was critical for maintaining coherence across the course while accommodating the complexity of industry-engaged project work.
 
-The redesigned course integrates flipped classroom pedagogy with Team-Based Learning (TBL) and Problem-Based Learning (PBL). In a flipped classroom approach, students engage with core material prior to class, allowing scheduled contact time to be used for discussion, problem solving, and application \cite{tucker2012flipped}. TBL structures this process through individual preparation, team readiness activities, and team-based application tasks \cite{michaelsen2004team,fink2003creating,sibley2014getting}.
+The contribution of this paper lies in its focus on assessment and feedback as mechanisms for professional competence development in an industry-engaged CDIO context. By reflecting on the design choices, observed outcomes, and tensions that emerged between academic and professional expectations, the paper aims to offer transferable insights for CDIO programs seeking to leverage industrial collaboration as a catalyst for student professional development. In particular, the case highlights the importance of explicitly preparing students to navigate differing expectations across academic and professional audiences, and of designing assessment practices that foreground professional standards without sacrificing formative learning space.
 
-\begin{figure}[ht]
-\centering
-\input{graphics/LCF-tikz-en}
-\caption{The LOUIS competence framework, showing the three competences emphasised in the Business Intelligence course: problem solving, information literacy, and teamwork. See \cite{auroraLOUIS}.}
-\label{fig:louis-grid}
+\section{Course and Industry Context}
+% TL;DR: Describes the educational setting (program, course, students)
+% and the nature of the industry collaboration, providing sufficient
+% context to interpret the case while maintaining transferability.
+The course is a \emph{6 ECTS} elective in Industrial Engineering intended for \emph{third-year BSc} and \emph{first-year MSc} students in Industrial Engineering, with additional enrolment from MSc students in \emph{Applied Mathematics} and \emph{Computer Science}. Practically, it is an \emph{upper-level undergraduate} offering positioned at the interface with \emph{early postgraduate} study.
+
+The course runs over one semester, organised into five thematic two-week cycles followed by a capstone integration (cf. Figure~\ref{fig:course-flow}). Each cycle follows a team-based learning pattern (iRAT/tRAT/tAPP/iREF); the capstone (tCAP) consolidates prior work within the same industrial context.
+
+Industry engagement is provided by a single partner organisation that contributes \emph{authentic data} and \emph{domain framing}; the collaboration was conducted consistently over \emph{two consecutive years} with the same partner. Students may enrich the context with publicly available sources, but analysis and deliverables remain anchored in the shared organisational setting to support coherence and cumulative competence development.
+
+
+
+\section{Design Framework and Alignment with CDIO}
+% TL;DR: Presents the conceptual and pedagogical framework guiding the
+% course redesign, showing how professional competence, assessment,
+% and feedback were intentionally aligned with CDIO principles and
+% Standards 5, 7, 8, and 11.
+
+The course redesign was guided by an explicit effort to align intended professional competencies, learning activities, and assessment practices within a CDIO-inspired framework. Rather than treating assessment as a final verification of learning outcomes, assessment and feedback were designed as integral components of the learning process, shaping students’ development toward professional standards while preserving space for formative learning.
+
+The framework combines team-based learning, problem- and experience-oriented pedagogy, and competence-oriented assessment, supported by professional tooling and industry-inspired constraints. Together, these elements position assessment and feedback as drivers of professional competence development in an industry-engaged context.
+
+\subsection{Professional Competence in a CDIO Perspective}
+% TL;DR: Defines professional competence in CDIO terms and introduces the
+% LOUIS framework, situating the selected competence domains within the
+% broader set of generic competencies.
+
+In this course, \emph{professional competence} is understood as the integrated ability to analyse and solve open, data-rich problems, to locate and critically evaluate information, and to collaborate effectively in teams under realistic constraints. This interpretation aligns with the CDIO Syllabus 3.0, which emphasises the development of personal, interpersonal, and system-building skills alongside disciplinary knowledge (\cite{cdioSyllabus3}), and is consistent with CDIO Standards addressing integrated learning experiences, active learning, and learning assessment (Standards 5, 7, 8, and 11).
+
+To make these competence goals explicit and assessable, the redesign drew on the LOUIS competence framework developed within the Aurora university alliance (\cite{auroraLOUIS}). LOUIS structures generic academic and professional competencies into sixteen domains with defined dimensions and progressive levels of performance, thereby bridging abstract competence descriptions and observable student work. Figure~\ref{fig:louis-grid} presents the full set of domains and highlights the three domains selected as design anchors for the course: \emph{problem solving}, \emph{information literacy}, and \emph{teamwork}. These domains were chosen for their centrality to business intelligence practice and their suitability as explicit targets for competence-oriented assessment in an industry-engaged course.
+
+\begin{figure}[t]
+  \centering
+  \input{graphics/lcf-tikz-en}
+  \caption{The LOUIS competence framework, showing the sixteen generic competence domains. The domains emphasised in the Business Intelligence course redesign—information literacy, problem solving, and teamwork—are highlighted.}
+  \label{fig:louis-grid}
 \end{figure}
 
-To support coherence between learning outcomes and assessment, the redesign was informed by the LOUIS competence framework developed within the Aurora university alliance \cite{auroraLOUIS}. From the framework, three competences were prioritised: problem solving, information literacy, and teamwork. These competences were embedded across learning activities and assessment and used as guidance when revising the course structure and project work. The relationship between the selected competences and the full LOUIS framework is shown in Fig.~\ref{fig:louis-grid}. The course design was also informed by the principles of Understanding by Design, which emphasise alignment between intended learning outcomes, teaching activities, and assessment \cite{wiggins2005understanding}.
+Focusing on a limited set of competence domains enabled constructive alignment between learning outcomes, learning activities, and assessment practices (\cite{biggs_constructive,wiggins2005understanding}). Rather than attempting to address all generic competencies implicitly, the course design foregrounded these three domains consistently across thematic cycles, project work, and assessment criteria, thereby maintaining coherence while accommodating the complexity of authentic project work.
 
-\section{Industry Collaboration and Project Structure}
+\subsection{Learning, Assessment, and Feedback Design Principles}
+% TL;DR: Explains the pedagogical principles underpinning the redesign,
+% including team-based learning, problem- and experience-oriented
+% learning, and assessment-as-development.
 
-A central change in the redesign was the introduction of a single industrial context sustained throughout the semester. Instead of working with new datasets in each thematic block, students collaborated with one industrial partner and explored a shared dataset across all course activities. The partner contributed data, problem framing, and feedback on student deliverables, while students were encouraged to extend the dataset where relevant.
+The learning design rests on three complementary principles:
+ \begin{description}
+     \item[Team-Based Learning as structure:] Team-Based Learning (TBL) provided the overall organisational structure of the course, dividing each instructional cycle into individual preparation, team readiness, team application, and individual reflection (\cite{michaelsen2004team,fink2003creating,sibley2014getting}). This structure promotes accountability, peer explanation, and application of methods during contact time. In this course, the team application phase (tAPP) was central, requiring students to apply analytical methods to authentic, industry-inspired data in collaborative settings.
+     \item[Problem- and experience-oriented learning:] Learning activities were framed as open-ended, data-intensive problems, drawing on principles from problem-based and experiential learning (\cite{barrows1980problem,kolb1984experiential,Bruce2012}). A single, sustained industrial context was shared across the semester, enabling students to deepen their understanding of the domain and iteratively refine analytical approaches rather than repeatedly onboarding to unrelated datasets.
+     \item[Assessment-as-development:]Assessment criteria were designed to foreground professional standards such as reliability, reproducibility, and credibility, while preserving formative learning space. Visible artefacts (e.g., version control histories, code reviews, intermediate reports) and structured reflection supported individual traceability within team outputs. Rubrics aligned with the selected LOUIS domains made expectations explicit and supported iterative improvement across cycles (\cite{biggs_constructive,wiggins2005understanding}). Feedback was provided through a combination of instructor guidance, peer input, and targeted industry feedback at key milestones.
+\end{description}
 
-The course was organised into five thematic iterations, each focusing on a specific Business Intelligence method applied to the shared dataset. This allowed students to build familiarity with both the data and the problem context while concentrating on new analytical approaches in each iteration. The course concluded with a capstone project in which students integrated their prior work into a coherent solution for the industrial partner, consistent with established descriptions of capstone learning experiences \cite{capstone}. The overall structure of the course and the progression from thematic iterations to the final capstone project are summarised in Fig.~\ref{fig:course-flow}.
+\subsection{Pedagogical Mechanisms and Tooling Choices}
+% TL;DR: Describes how the design principles were enacted through flipped
+% preparation, professional collaboration tools, and agile-inspired
+% iteration and reflection.
 
+Preparatory materials and method overviews were assigned outside scheduled class time, reserving contact time for application, discussion, and feedback (flipped classroom; \cite{tucker2012flipped}). Within each TBL cycle, individual readiness activities (iRAT) required students to propose context-specific uses of analytical methods, while team readiness discussions (tRAT) consolidated approaches before project execution.
 
-\begin{figure}[ht]
-\centering
-\input{graphics/course-flow-en}
-\caption{Course structure and progression across five thematic iterations leading to the capstone project. Each iteration spans two weeks and focuses on a specific Business Intelligence method applied within a shared industrial context.}
-\label{fig:course-flow}
+GitHub Classroom was adopted as the primary collaboration environment, reflecting common practice in data-intensive professional work. The platform supported version control, peer review, and reproducibility, and enabled assessment to recognise both team outcomes and individual contributions through observable work traces.
+
+Each two-week thematic cycle was intentionally aligned with agile development practices (\cite{schwaber2002agile}). Planning activities in tRAT functioned as lightweight sprint planning, tAPP as the execution phase, and individual reflection (iREF) as a structured retrospective. Crucially, iREF was not treated as optional or purely evaluative reflection. Instead, students documented unresolved issues, methodological limitations, and improvement ideas as forward-oriented notes to themselves. These reflections formed a personal backlog that students revisited and integrated when commencing the capstone project.
+
+\subsection{Course Flow and Iterative Integration}
+% TL;DR: Introduces the course flow figure and explains how thematic
+% cycles, reflection, and the capstone project were intentionally
+% connected to ensure continuity and professional learning.
+
+Figure~\ref{fig:course-flow} illustrates the overall course flow, showing how five thematic TBL cycles feed into a final capstone project. Each cycle comprises preparation (iRAT/tRAT), team project work (tAPP), and individual reflection (iREF). Dashed connections indicate how both team outputs and individual reflections contributed to the capstone project (tCAP).
+
+\begin{figure}[t]
+  \centering
+  \input{graphics/course-flow-en}
+  \caption{Course flow illustrating the structure of thematic team-based learning cycles and their integration into the capstone project. Each cycle includes preparation (iRAT/tRAT), team application (tAPP), and individual reflection (iREF). Reflections serve as forward-oriented notes and backlogs that inform the capstone project (tCAP), supporting continuity, iteration, and professional competence development across the semester.}
+  \label{fig:course-flow}
 \end{figure}
 
-\section{Collaboration Tools and Peer Review}
+By explicitly carrying insights, constraints, and unresolved questions forward into the capstone, the course avoided treating assessment tasks as isolated events. Instead, assessment and feedback accumulated across cycles, reinforcing learning as an iterative, developmental process aligned with professional practice.
 
-To support collaboration and transparency, GitHub Classroom was introduced as the main project platform. The tool enabled version control, shared documentation, and peer review of code and reports, reflecting common professional practice. Student activity within the platform provided visible evidence of individual contribution and supported ongoing supervision.
+\subsection{Alignment with CDIO Standards}
+% TL;DR: Maps the redesigned course structure to relevant CDIO Standards,
+% demonstrating explicit alignment between framework, learning
+% activities, and assessment practices.
 
-Peer review was implemented using mechanisms inspired by industrial workflows, where code and documents are reviewed during development rather than only at submission. Within teams, students reviewed each other’s work and provided structured feedback. In later stages of the course, teams also reviewed the work of other teams. Assessment of peer review focused on the quality and constructiveness of the feedback rather than numerical scoring.
+The redesigned course aligns with CDIO Standards in several ways. Standard~5 (Design--Implement Experiences) is addressed through semester-long, industry-inspired project work that requires students to design analytical approaches and implement reproducible solutions. Standard~7 (Integrated Learning Experiences) is reflected in the intentional integration of professional competencies with business intelligence methods within a sustained industrial context. Standard~8 (Active Learning) is operationalised through TBL cycles, flipped preparation, and in-class application requiring reasoning, collaboration, and decision-making. Finally, Standard~11 (Learning Assessment) is addressed by competence-aligned rubrics, artefact-based accountability, and iterative feedback loops that balance formative learning with professional expectations.
 
-\section{Assessment and Feedback}
+Together, these elements position assessment and feedback as central drivers of professional competence development in a CDIO-aligned business intelligence course.
 
-Assessment was designed to support iterative learning while maintaining clear quality standards. Deliverables from the thematic iterations were assessed using the same criteria as the final capstone project, but grading was scaled to emphasise formative feedback. This approach allowed students to understand expectations for final project quality without being penalised for work that was still under development.
+\section{Course Redesign: Assessment and Feedback Architecture}
+% TL;DR: Presents the core contribution of the paper by detailing how
+% assessment and feedback were intentionally designed as mechanisms for
+% professional competence development in an industry-engaged setting.
 
-Individual assessment was based on visible contribution in the collaboration platform and structured individual reflection. This combination was intended to address challenges related to fairness and uneven workload distribution commonly associated with team-based projects.
+This section describes how assessment and feedback were redesigned to support professional competence development rather than primarily serving as summative measurement. Building on the design framework outlined in Section~3, assessment was treated as a central element of the learning architecture, shaping student behaviour, collaboration, and engagement with professional standards throughout the semester.
 
-\section{Outcomes and Reflections}
+The redesign responded explicitly to tensions observed in earlier iterations of the course, including perceived misalignment between academic assessment practices and industry expectations, uneven workload distribution in team projects, and limited continuity between individual project cycles. Addressing these challenges required rethinking the role of assessment artefacts, feedback timing, and individual accountability within collective work.
 
-Evidence from student evaluations, reflective writing, graduate feedback, and input from the industrial partner suggests increased student engagement and improved coherence across learning activities. Attendance and participation were consistently high, and students reported that working with realistic data and tools helped them understand how Business Intelligence methods are applied in professional contexts.
+\subsection{From Assessment as Measurement to Assessment as Development}
+% TL;DR: Explains the shift from predominantly summative assessment toward
+% a developmental model that integrates formative feedback while
+% maintaining professional standards and credibility.
 
-At the same time, collaboration with industry revealed differences in expectations between academic and professional settings. While academic assessment can tolerate minor errors in developmental work, industry partners placed greater emphasis on reliability and trustworthiness. Recognising and discussing these differences became an important part of students’ learning and professional preparation.
+In traditional academic settings, assessment frequently functions as an endpoint that certifies attainment of learning outcomes. While this model supports grading efficiency, it often provides limited guidance for improving professional performance during the learning process. In industry, by contrast, assessment is continuous, embedded in work practices, and closely tied to trust, credibility, and decision-making.
 
-\section{Conclusion}
+The course redesign therefore adopted a developmental view of assessment, in which assessment criteria and feedback were used to guide students toward professional standards over time. Rather than optimising for early correctness, students were encouraged to surface assumptions, explore alternative approaches, and document limitations. Errors were treated as acceptable during early stages, provided that they were recognised, addressed, and communicated clearly.
 
-The redesign of the Business Intelligence course demonstrates how sustained industry collaboration, combined with active learning and competence-oriented assessment, can strengthen the connection between academic learning and professional practice. By aligning learning activities, assessment, and tools with realistic working practices, the course supported both technical learning and the development of transferable competences. The experience highlights the importance of making professional expectations explicit and of designing assessment and feedback mechanisms that support iterative learning while maintaining clear standards.
+To support this shift, assessment rubrics were deliberately aligned across thematic cycles and the capstone project. Criteria related to analytical soundness, transparency, reproducibility, and stakeholder relevance were introduced early and reused consistently, enabling students to interpret assessment feedback cumulatively rather than as isolated judgments. This approach reinforced assessment as an integral component of learning, consistent with principles of constructive alignment and understanding-oriented design (\cite{biggs_constructive,wiggins2005understanding}).
+
+\subsection{Industry-Engaged Project Structure}
+% TL;DR: Describes the semester-long, industry-inspired project context,
+% including the use of authentic data, reproducible workflows, and
+% industry input shaping problem framing and evaluation practices.
+
+A key element of the assessment architecture was the use of a shared, industry-inspired project context spanning the entire semester. A single industry partner provided an authentic dataset and participated in problem framing, milestone discussions, and final presentations. Students were free to augment the provided data with additional sources, but all work remained anchored in the same organisational and analytical context.
+
+This design choice addressed two recurring challenges observed in earlier course iterations: repeated onboarding to unrelated datasets and weak coherence between project cycles. By maintaining a stable context, students could progressively deepen their understanding of the domain, refine analytical approaches, and revisit earlier assumptions as new methods were introduced.
+
+Assessment requirements emphasised reproducibility and traceability. All analyses were developed in shared repositories, and deliverables consisted not only of reports and presentations, but also of executable code and documented workflows. This structure mirrored professional expectations in data-intensive work and reinforced the importance of credible, transferable results.
+
+Industry engagement also influenced how assessment criteria were interpreted. Feedback from the industry partner underscored that minor analytical or conceptual flaws could undermine trust in results, even when the overall approach was sound. This contrast with academic tolerance for developmental error provided a valuable learning opportunity and highlighted the need to prepare students to adapt their communication and quality standards to different audiences.
+
+\subsection{Balancing Team Performance and Individual Accountability}
+% TL;DR: Explains how assessment design balanced collective team outcomes
+% with individual accountability using visible artefacts and structured
+% reflection, addressing fairness and workload concerns.
+
+Team-based project work was central to the course, reflecting professional practice in business intelligence. However, team assessment introduces well-known challenges related to unequal contribution, free-riding, and perceived unfairness. Rather than relying solely on peer grading or individual exams, the redesign adopted a dual assessment strategy.
+
+Team deliverables were assessed collectively with respect to analytical quality, coherence, and professional relevance. In parallel, individual contribution was assessed through visible artefacts generated during project work, including version-control activity, code reviews, and documented design decisions. Structured individual reflection complemented these artefacts by requiring students to articulate their contributions, uncertainties, and learning needs.
+
+This approach allowed individual accountability to be supported without fragmenting team outcomes. Importantly, individual assessment did not function as a penalty mechanism, but as a way to make professional work practices visible for learning and feedback. Students reported that this transparency clarified expectations and reduced uncertainty about how their individual efforts were recognised within the team context.
+
+\subsection{Feedback Loops and Iterative Learning}
+% TL;DR: Describes how teacher, peer, and industry feedback were integrated
+% across iterations, enabling cumulative learning while maintaining
+% professional credibility and relevance.
+
+Feedback was integrated at multiple levels and stages of the course. Instructor feedback focused on methodological soundness, alignment with competence criteria, and progression across cycles. Peer feedback occurred primarily within teams, through code review and collaborative problem-solving, and across teams during selected review moments.
+
+Individual reflection (iREF) played a central role in linking feedback to future action. Rather than serving as a retrospective evaluation, reflection functioned as a forward-oriented practice in which students documented unresolved issues, limitations, and improvement opportunities. As illustrated in Figure~\ref{fig:course-flow}, these reflections formed a personal backlog that students revisited during the capstone project, enabling feedback from earlier cycles to inform later design decisions.
+
+Industry feedback was strategically positioned at key points, particularly during the capstone phase. While academic feedback often tolerated developmental imperfection, industry feedback foregrounded trustworthiness, clarity, and practical usability. The coexistence of these feedback modes challenged students to reconcile academic and professional expectations and to adapt their work and communication accordingly.
+
+Together, these feedback loops supported iterative learning across the semester and reinforced assessment as a developmental process, closely aligned with professional practice while remaining pedagogically supportive.
+
+\section{Student and Industry Responses}
+% TL;DR: Summarises key student and industry responses relevant to
+% engagement, coherence, and perceived professional relevance, without
+% detailed evaluation data.
+
+Evidence of the impact of the redesigned assessment and feedback architecture was gathered through course evaluations, student reflections, informal graduate feedback, and input from the participating industry partner. Across these sources, consistent themes emerged regarding engagement, coherence, and alignment with professional expectations.
+
+Students reported high levels of engagement and perceived relevance. Attendance and active participation remained strong throughout the semester despite the absence of formal attendance requirements. Students highlighted the sustained industrial context and cumulative project structure as particularly supportive of learning, noting that working with a shared dataset across thematic cycles reduced overhead and strengthened understanding of how analytical methods connect in practice. Although the workload was perceived as substantial, students largely characterised it as meaningful and aligned with professional preparation.
+
+Graduate feedback collected after course completion suggested that several elements of the course transferred directly to professional practice. Graduates identified reproducible workflows, collaborative problem-solving, and explicit documentation of assumptions and limitations as particularly valuable in early career roles. Familiarity with professional tooling and expectations around credibility and transparency were also cited as easing the transition to workplace settings.
+
+The industry partner reported improved coherence and credibility of student outputs compared with earlier course iterations. At the same time, the collaboration made visible differences between academic and professional tolerance for error, particularly when analytical shortcomings affected trust in conclusions. This divergence reinforced the importance of preparing students to adapt quality standards and communication to different audiences.
+
+Overall, responses indicated that the redesigned assessment and feedback architecture supported engagement and professional competence development, while also exposing productive tensions between academic learning practices and industry expectations. These tensions are examined further in the following section.
+
+\section{Tensions, Trade-offs, and Lessons Learned}
+% TL;DR: Reflects on key tensions revealed through industry-engaged
+% assessment, particularly between developmental learning practices
+% and industry expectations of reliability, trust, and accountability.
+
+Industry engagement exposed several productive tensions that shaped both the redesign and its outcomes. The most prominent concerned the balance between academic tolerance for developmental error and industry expectations of reliability and trustworthiness. Within the course, early analytical imperfections were accepted as part of learning, provided they were identified, documented, and addressed through iteration. In contrast, industry feedback indicated that even minor conceptual or methodological weaknesses could undermine confidence in results, regardless of the overall quality of the work.
+
+This tension revealed an important pedagogical trade-off. Preserving formative learning space is essential for student development, yet insufficient attention to professional standards risks misrepresenting workplace realities. The redesign addressed this by making quality expectations explicit, differentiating between internal academic feedback and external-facing deliverables, and preparing students to adapt both analytical rigor and communication style depending on audience.
+
+A second trade-off emerged in relation to team-based assessment. Large, collaborative projects support professional skill development, but also intensify concerns about workload distribution and individual accountability. Relying on visible artefacts and structured reflection reduced ambiguity around individual contribution, yet increased transparency also heightened student sensitivity to perceived inequities. This underscores the need for early alignment of expectations and clear communication of assessment logic in team-based courses.
+
+Tooling and workflows presented a further area of tension. While professional collaboration platforms enhanced authenticity and reproducibility, they also introduced an initial learning burden. Locating tool onboarding earlier in the curriculum was identified as a pragmatic adjustment to preserve realism without overwhelming students during complex project work.
+
+Collectively, these lessons suggest that industry-engaged assessment requires continuous negotiation between realism and pedagogical support. Designing explicitly for these tensions—rather than attempting to eliminate them—proved essential for maintaining both learning quality and professional credibility.
+
+\section{Transferable Design Principles for CDIO Programs}
+% TL;DR: Distils lessons from the case into a concise set of design
+% principles that other CDIO programs can adapt when implementing
+% industry-engaged, competence-oriented assessment and feedback.
+
+Based on the redesign and its observed outcomes, several transferable design principles can guide CDIO programs seeking to integrate industry engagement with competence-oriented assessment and feedback.
+
+\begin{enumerate}
+  \item \textbf{Anchor assessment in a sustained industrial context.}  
+  Maintaining a shared, semester-long industry context supports coherence across learning activities and enables cumulative competence development, reducing fragmentation between project cycles.
+
+  \item \textbf{Design assessment as a developmental process.}  
+  Align assessment criteria across formative and summative tasks so that feedback accumulates over time and guides students toward professional standards rather than functioning as isolated judgments.
+
+  \item \textbf{Make individual contribution visible within team work.}  
+  Combine team-level outputs with artefact-based indicators and structured reflection to support accountability and fairness without undermining collaborative learning.
+
+  \item \textbf{Use reflection as forward-oriented professional practice.}  
+  Frame reflection as documentation of unresolved issues and improvement opportunities that inform subsequent design decisions, rather than as retrospective self-evaluation alone.
+
+  \item \textbf{Explicitly manage academic–industry expectation gaps.}  
+  Surface differences between developmental learning tolerance and professional reliability requirements early, and prepare students to adapt quality standards and communication to audience and context.
+
+  \item \textbf{Introduce professional tooling with intentional scaffolding.}  
+  Select tools that support authenticity and reproducibility, but ensure early alignment and onboarding to prevent tool mastery from overshadowing learning objectives.
+\end{enumerate}
+
+These principles emphasise assessment and feedback as central design elements in CDIO-aligned courses and offer practical guidance for leveraging industry collaboration to support professional competence development.
+
+\section{Conclusions and Future Work}
+% TL;DR: Concise close that reaffirms the contribution, notes two concrete
+% refinements (GitHub as prerequisite; trust-first kickoff), and sets a
+% focused agenda for future evaluation and scaling.
+This paper presented a CDIO-aligned redesign of an industry-engaged Business Intelligence course in which assessment and feedback act as the primary mechanisms for professional competence development. The approach is anchored in the CDIO Syllabus~3.0 (\cite{cdioSyllabus3}) and aligned with Standards~5,~7,~8, and~11, combining team-based learning, authentic project work, and competence-oriented assessment within a sustained industrial context. The design strengthened coherence and professional relevance while making visible a productive tension between developmental learning space and workplace expectations of reliability and trust.
+
+Two targeted refinements follow from iterative delivery. First, to minimise cognitive overhead and keep thematic cycles in focus, mastery of collaboration tooling (e.g., GitHub) is moved to a prerequisite undergraduate course. Second, to accelerate effective collaboration and credibility, the opening session prioritises team formation, trust-building, and exploratory brainstorming within the industrial context before readiness tests and application work.
+
+Future work will evaluate how this sequencing affects team dynamics, credibility of deliverables, and competence development across cohorts and domains, and will explore how the assessment architecture scales to additional partners and related data-intensive courses. 
