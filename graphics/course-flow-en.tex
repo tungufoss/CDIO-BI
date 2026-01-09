@@ -38,7 +38,7 @@
     % Litur/lotur
     \foreach \week/\theme/\color/\pos in {1--2/Data Ethics/red/1, 3--4 /Large Language Models/orange/2, 5--6/Supervised Learning/yellow/3, 7--8 /Clustering/green/4, 9--10/Process Mining/violet/5}{
         \node[week] (week\pos) at (0,-\pos*10mm) {Week \week\\\theme};
-        \node[\color, right of=week\pos, xshift=-50+10*\pos,label=below:\textbf{Preperation}] (RAT\pos)  {Student (iRAT)\\Team (tRAT)};
+        \node[\color, right of=week\pos, xshift=-50+10*\pos,label=below:\textbf{Preparation}] (RAT\pos)  {Student (iRAT)\\Team (tRAT)};
         \node[\color, right of=RAT\pos,label=below:\textbf{Project}] (APP\pos) {Team (tAPP)};
         \node[\color, right of=APP\pos,label=below:\textbf{Reflection}] (REF\pos) {Student (iREF)};
 
