@@ -323,7 +323,8 @@
 \href{mailto:#2}{#2}\\
 \end{tabular}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\hfill
+\begin{minipage}{0.45\textwidth}
   \includegraphics[width=32mm]{by-nc-nd}\\
   This work is licensed under a
   \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative
