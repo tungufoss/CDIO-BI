@@ -49,6 +49,7 @@
 \newcommand{\setNAME}[1]{\def\NAME{#1}}
 \newcommand{\setTITLE}[1]{\def\TITLE{#1}}
 \newcommand{\setSUBTITLE}[1]{\def\SUBTITLE{#1}}
+\newcommand{\setSHORTTITLE}[1]{\def\SHORTTITLE{#1}}
 \newcommand{\setFACULTY}[1]{\def\FACULTY{#1}}
 \newcommand{\setSEMINAR}[1]{\def\SEMINAR{#1}}
 \newcommand{\setEMAIL}[1]{\def\EMAIL{#1}}
@@ -70,6 +71,7 @@
 
 \define@key{hi-beamer}{NAME}{\setNAME{#1}}
 \define@key{hi-beamer}{TITLE}{\setTITLE{#1}}
+\define@key{hi-beamer}{SHORTTITLE}{\setSHORTTITLE{#1}}
 \define@key{hi-beamer}{SUBTITLE}{\setSUBTITLE{#1}}
 \define@key{hi-beamer}{FACULTY}{\setFACULTY{#1}}
 \define@key{hi-beamer}{SEMINAR}{\setSEMINAR{#1}}
@@ -86,7 +88,7 @@
     \RequirePackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter}
 }{}
 
-\title{\TITLE}
+\title[\SHORTTITLE]{\TITLE}
 \date{\DATE}
 
 \newcommand{\hibeamerdir}{HI-LaTeX}
