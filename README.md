@@ -1,57 +1,95 @@
+# CDIO Implementation Paper
+## Designing Authentic Industry-Engaged Assessment for Professional Competence in Business Intelligence
 
-# CDIO Implementation Paper  
-## Authentic Industry-Engaged Assessment for Professional Competence in Business Intelligence
-
-This repository contains the source files for a **CDIO Implementation Paper** submitted to the **22nd International CDIO Conference (2026)**.
-
-**Title:**  
-DESIGNING AUTHENTIC INDUSTRY‑ENGAGED ASSESSMENT FOR PROFESSIONAL COMPETENCE IN BUSINESS INTELLIGENCE
-
-**Author:**  
-Helga Ingimundardóttir  
-Assistant Professor of Industrial Engineering  
-University of Iceland
+**Author:** Helga Ingimundardóttir, Assistant Professor of Industrial Engineering, University of Iceland
+**Event:** 22nd International CDIO Conference, June 23rd, 2026
 
 ---
 
 ## Overview
 
-The paper describes the redesign and implementation of an undergraduate Business Intelligence course aligned with **CDIO Standards 5, 7, 8, and 11**. The course integrates **industry‑engaged, semester‑long project work**, team‑based learning, and **competence‑oriented assessment and feedback** to support professional competence development.
+This repository contains the paper source and the conference presentation for a CDIO Implementation paper accepted for the 22nd International CDIO Conference (2026).
 
-The contribution is framed as a **CDIO Implementation case**, reporting on a completed course redesign delivered across two iterations, and reflecting on design principles, tensions, and transferable insights from sustained industry collaboration.
-
----
-
-## Repository Contents
-
-- `Ingimundardottir_CDIO_Industry_Engaged_Assessment_Business_Intelligence.pdf`  
-  → Final submission PDF
-
-- `cdio2025-HelgaIngim-BI.tex`  
-  → Main LaTeX source file
-
-- `body.tex`  
-  → Paper body (sections and content)
-
-- `references.bib`  
-  → BibTeX references
-
-- `cdio.cls`  
-  → CDIO conference LaTeX class file
-
-- `graphics/`  
-  → Figures used in the paper
+The paper describes the redesign of an undergraduate Business Intelligence course to strengthen industrial relevance and professional competence. Key elements include a sustained industry-engaged project, team-based learning, and competence-oriented assessment using pull requests and accumulated feedback.
 
 ---
 
-## Build Information
+## Presentation (Quarto RevealJS)
 
-The paper is compiled using **LaTeX** with the official `cdio.cls` class file provided by the CDIO Conference.
+The slides are built with [Quarto](https://quarto.org/) using a custom HI (University of Iceland) RevealJS theme.
 
-To compile locally:
+To render:
+
 ```bash
-pdflatex cdio2025-HelgaIngim-BI.tex
-bibtex cdio2025-HelgaIngim-BI
-pdflatex cdio2025-HelgaIngim-BI.tex
-pdflatex cdio2025-HelgaIngim-BI.tex
-``
+quarto render slides.qmd
+```
+
+Output: `index.html`
+
+### Structure
+
+| Path | Description |
+|------|-------------|
+| `slides.qmd` | Main presentation source |
+| `index.html` | Rendered presentation |
+| `styles/colors.css` | HI brand colour variables |
+| `styles/hi26-reveal.css` | Base HI RevealJS theme |
+| `styles/cdio2026.css` | Conference-specific overrides |
+| `_extensions/card-enum/` | Lua filter: `.fa-card` and `.card-enum` layouts |
+| `_extensions/hi-title/` | Lua filter: HI title slide shortcode |
+| `_extensions/menti/` | Lua filter: Mentimeter embed shortcode |
+| `_extensions/pause/` | Lua filter: animated pause shortcode |
+| `partials/header-includes.inc` | Font Awesome + Jost font CDN links |
+| `partials/body-after.inc` | Scripts injected after body |
+| `partials/contact-card.html` | Reusable contact card HTML |
+| `scripts/countdown.js` | Countdown timer script |
+| `include/lcf-grid.svg` | LOUIS competence framework grid |
+| `include/course-flow.svg` | Pedagogical structure diagram |
+| `include/vr2.jpg` | Photo used on contact slide |
+| `img/hi/` | HI logos and favicon |
+
+---
+
+## Paper (LaTeX)
+
+The paper is compiled with XeLaTeX and BibLaTeX (biber backend).
+
+To compile:
+
+```bash
+xelatex cdio2025-HelgaIngim-BI.tex
+biber cdio2025-HelgaIngim-BI
+xelatex cdio2025-HelgaIngim-BI.tex
+xelatex cdio2025-HelgaIngim-BI.tex
+```
+
+### Structure
+
+| Path | Description |
+|------|-------------|
+| `cdio2025-HelgaIngim-BI.tex` | Main LaTeX source |
+| `cdio2025-HelgaIngim-BI.pdf` | Compiled paper PDF |
+| `cdio.cls` | CDIO conference class file |
+| `references.bib` | BibLaTeX references |
+| `include/body.tex` | Paper body |
+| `include/LCF-tikz-en.tex` | TikZ: LOUIS competence framework |
+| `include/course-flow-en.tex` | TikZ: pedagogical structure diagram |
+| `include/by-nc-nd.pdf` | CC BY-NC-ND licence figure |
+
+---
+
+## Review Materials
+
+| Path | Description |
+|------|-------------|
+| `REVIEWS.md` / `REVIEWS.pdf` | Acceptance letter and reviewer comments |
+| `REVISION.md` / `REVISION.pdf` | Response to reviewers |
+
+---
+
+## CDIO Standards Alignment
+
+- **Standard 5** — Design-Implement Experiences
+- **Standard 7** — Integrated Learning Experiences
+- **Standard 8** — Active Learning
+- **Standard 11** — Learning Assessment
