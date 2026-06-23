@@ -31,10 +31,8 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
-  <link rel="stylesheet" href="styles/colors.css">
-  <link rel="stylesheet" href="styles/hi26-reveal.css">
-  <link rel="stylesheet" href="styles/cdio2026.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-88e2b974d72e5216a4a1a4f52142c880.css">
+  <link rel="stylesheet" href="styles/watermark.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -144,21 +142,16 @@
 <h1 class="subtitle-highlight">Designing Authentic Industry-Engaged Assessment for Professional Competence</h1>
 </div>
 <div class="title-meta">
-<a href="https://hi.is/staff/helgaingim" target="_blank" rel="noopener noreferrer"><strong>Dr.&nbsp;Helga Ingimundardóttir</strong></a><a class="title-meta-icon" href="https://orcid.org/0000-0002-2780-3546" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a> <a class="title-meta-email" href="mailto:helgaingim@hi.is"><i class="fa-solid fa-envelope" aria-hidden="true"></i> helgaingim@hi.is</a>
+<a href="https://hi.is/staff/helgaingim" target="_blank" rel="noopener noreferrer"><strong>Dr.&nbsp;Helga Ingimundardóttir</strong></a><a class="title-meta-icon" href="https://orcid.org/0000-0002-2780-3546" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a><a class="title-meta-icon" href="https://github.com/users/tungufoss/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a> <a class="title-meta-email" href="mailto:helgaingim@hi.is"><i class="fa-solid fa-envelope" aria-hidden="true"></i> helgaingim@hi.is</a>
 </div>
 <div class="event-meta">22<sup>nd</sup> International CDIO Conference · June 23<sup>rd</sup>, 2026</div>
-</section>
-<section id="motivation" class="slide level2">
-<h2>Motivation</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-building-columns fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Academia</h3><p>aims to prepare students for professional practice, but offers limited guidance on how to operationalize this in course design and assessment</p></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry</h3><p>expects credible, reproducible results supported by clear reasoning and usable for decision-making</p></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-scale-balanced fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Underlying mismatch</h3><p>what counts as “good work” differs between academic and professional contexts</p></div></div></div></div>
 <aside class="notes">
-<p>This work starts from a familiar gap.</p>
-<p>Universities aim to prepare students for professional practice — but translating that into course design is not straightforward.</p>
-<p>At the same time, industry expectations are quite concrete. Work needs to be credible, reproducible, and usable.</p>
-<p>And these perspectives do not always align.</p>
-<p>So the question is not whether we value the same things — but how those values are actually operationalized in courses.</p>
+<p>I’m <strong>Helga Ingimundardóttir</strong> from the <strong>University of Iceland</strong> — this is my first time at CDIO, and I’m presenting <strong>twice this week</strong>.</p>
+<ul>
+<li><strong>Today</strong>: <em>why</em> we redesigned and what the design looks like</li>
+<li><strong>Tomorrow</strong> (June 24): <em>how</em> — pull requests as assessment infrastructure</li>
+<li>Relevant if you do <strong>industry-engaged</strong> or <strong>project-based</strong> courses</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -171,17 +164,19 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="what-prompted-the-redesign" class="slide level2">
-<h2>What prompted the redesign</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Observed in an industry-facing course</h3><ul class="fa-card-list"><li>industry partners valued collaboration — but would not use the results</li><li>students reported a very heavy and uneven workload</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-circle-question fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Core question</h3><p>how do we design courses so that student work is <em class="emph">authentic in practice</em>, while still supporting <em class="emph">meaningful learning</em>?</p></div></div></div></div>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-building-columns fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Academia</h3><p>aims to prepare students for professional practice, but offers limited guidance on how to operationalize this in course design and assessment</p></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry</h3><p>expects credible, reproducible results supported by clear reasoning and usable for decision-making</p></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-scale-balanced fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Underlying mismatch</h3><p>what counts as “good work” differs between academic and professional contexts</p></div></div></div></div>
 <aside class="notes">
-<p>This is not just a theoretical issue.</p>
-<p>In an earlier version of the course, we worked with an industry partner and asked how useful the student results were.</p>
-<p>They appreciated the collaboration — but they would not actually use the results.</p>
-<p>At the same time, students experienced the course as quite heavy and time-consuming.</p>
-<p>So the course was not fully working for either side.</p>
-<p>That leads to the core question: how do we design assessment so that the work is authentic in practice, while still supporting meaningful learning?</p>
+<p>Everyone agrees academia should prepare students for professional practice — the question is <strong>how to actually design for it</strong>.</p>
+<ul>
+<li>This isn’t a <strong>values</strong> mismatch — it’s a <strong>design</strong> mismatch</li>
+<li>Industry needs work that is <strong>credible, reproducible, decision-usable</strong></li>
+<li>Our own course: the partner valued the collaboration but <strong>would not use the results</strong>; students found it <strong>heavy and uneven</strong></li>
+<li>Core question: how do we design so work is <strong>authentic in practice</strong> <em>and</em> <strong>meaningful for learning</strong>?</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -196,14 +191,17 @@
 </section>
 <section id="context-business-intelligence" class="slide level2">
 <h2>Context: Business Intelligence</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-magnifying-glass-chart fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Overview</h3><ul class="fa-card-list"><li>6 ECTS course</li><li>advanced undergraduate and early graduate students</li><li>10–15 students, two teams</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-database fa-fw box-icon"></i></div><div class="fa-card-body"><h3>What is BI?</h3><p>data-driven decision support</p><ul class="fa-card-list"><li>data analysis</li><li>systems integration</li><li>communication to inform organizational decisions</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-bullseye fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Goal</h3><p>strengthen industrial relevance and professional competence</p></div></div></div></div>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 2;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-magnifying-glass-chart fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Overview</h3><ul class="fa-card-list"><li>6 ECTS course</li><li>advanced undergraduate and early graduate students</li><li>10–15 students, two teams</li></ul></div></div>
+<div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-database fa-fw box-icon"></i></div><div class="fa-card-body"><h3>What is BI?</h3><p>data-driven decision support</p><ul class="fa-card-list"><li>data analysis</li><li>systems integration</li><li>communication to inform organizational decisions</li></ul></div></div></div></div>
+<div class="statement">
+<p>Goal: <strong>strengthen industrial relevance and professional competence</strong></p>
+</div>
 <aside class="notes">
-<p>The context is a Business Intelligence course.</p>
-<p>What matters here is that BI is not just about analysis — it is about decision support.</p>
-<p>So students are not only expected to produce correct analyses, but also to communicate assumptions, limitations, and implications.</p>
-<p>And importantly, this is done in collaboration with an industry partner, so the work is evaluated in a realistic context.</p>
+<p>Business Intelligence is about <strong>decision support</strong> — not just producing correct results, but communicating <strong>assumptions, limitations, and implications</strong>.</p>
+<ul>
+<li><strong>6 ECTS</strong>, advanced undergrad and early grad, <strong>10–15 students</strong> in two teams</li>
+<li>Small enough for <strong>sustained industry engagement</strong> — that’s the key</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -218,15 +216,16 @@
 </section>
 <section id="industry-engaged-project" class="slide level2">
 <h2>Industry-engaged project</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-handshake fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Sustained industrial context</h3><p>a single dataset and domain used across the entire semester</p></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry partner role</h3><ul class="fa-card-list"><li>problem framing</li><li>milestone discussions</li><li>final evaluation</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-scale-balanced fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Dual context</h3><p>academic and industry perspectives coexist throughout</p></div></div></div></div>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-handshake fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Sustained industrial context</h3><p>a single dataset and domain used across the entire semester</p></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry partner role</h3><ul class="fa-card-list"><li>problem framing</li><li>milestone discussions</li><li>final evaluation</li></ul></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-scale-balanced fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Dual context</h3><p>academic and industry perspectives coexist throughout</p></div></div></div></div>
 <aside class="notes">
-<p>An initial, relatively simple change addressed both concerns.</p>
-<p>We moved to a single, persistent industry case across the semester.</p>
-<p>This reduces workload by removing repeated onboarding and allows students to build a deeper and more coherent understanding of the data and domain.</p>
-<p>So instead of producing isolated analyses, they develop work that evolves over time within a realistic setting.</p>
-<p>This creates the conditions for more meaningful and usable results.</p>
+<p>The biggest single structural change was using <strong>one dataset, one domain, all semester</strong>.</p>
+<ul>
+<li>No repeated onboarding — students build <strong>depth</strong> instead of breadth</li>
+<li>Industry partner present at <strong>problem framing → milestones → final evaluation</strong></li>
+<li>That continuity is what creates conditions for <strong>usable results</strong></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -241,15 +240,17 @@
 </section>
 <section id="design-focus-louis-guided" class="slide level2">
 <h2>Design focus: LOUIS-guided</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-key fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Design focus</h3><ul class="fa-card-list"><li>limited set of competences (LOUIS)</li><li>sustained industry context</li><li>iterative development toward capstone</li></ul></div></div></div></div>
+<div class="statement">
+<p>Focus on a small set of competences within a sustained industry context.</p>
+</div>
 <p><span class="lean-in"><a href="https://aurora-universities.eu/louis/"><strong>LOUIS</strong></a> — Learning Outcomes in University for Impact on Society (Aurora University Network). Focus on a small set of competences (max 3).</span></p>
-<p><img data-src="include/lcf-grid.svg" style="width:100%;max-height:420px;object-fit:contain;display:block;margin:auto"></p>
+<p><img data-src="include/lcf-grid.svg" style="width:100%;max-height:390px;object-fit:contain;display:block;margin:auto"></p>
 <aside class="notes">
-<p>For this redesign, I attended a workshop on the LOUIS framework — Learning Outcomes in University for Impact on Society.</p>
-<p>LOUIS is part of the Aurora University Network, and is intended to strengthen broader academic and personal competences alongside subject knowledge.</p>
-<p>A key takeaway from that workshop was to avoid spreading too thin — instead, focus on a small number of competences and make expectations explicit.</p>
-<p>So this redesign is directly informed by that work.</p>
-<p>LOUIS helped translate high-level competence goals into concrete learning outcomes that students can understand and act on.</p>
+<p>To focus the redesign, I used the <strong>LOUIS</strong> framework — Learning Outcomes in University for Impact on Society — developed by the <strong>Aurora University Network</strong>, a European alliance of nine research universities of which the <strong>University of Iceland is a member</strong>. Aurora runs <strong>faculty workshops</strong> to help teachers embed these competences into their courses — which is exactly what I did.</p>
+<ul>
+<li>Key workshop insight: <strong>don’t spread thin</strong> — pick at most <strong>three competences</strong> and make expectations explicit</li>
+<li>We chose: <strong>Information literacy · Problem solving · Teamwork</strong></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -264,23 +265,27 @@
 </section>
 <section id="pedagogical-structure" class="slide level2">
 <h2>Pedagogical structure</h2>
-<p><img data-src="include/course-flow.svg" style="display:block;margin:auto;max-height:560px;width:100.0%"></p>
-<p style="text-align:center;margin-top:0.4em;font-size:14px;color:var(--muted);font-style:italic">
+<p><img data-src="include/course-flow.svg" style="display:block;margin:auto;max-height:420px;width:100.0%"></p>
+<p style="text-align:center;margin-top:0.25em;margin-bottom:0;font-size:13px;color:var(--muted);font-style:italic">
   <i class="fa-solid fa-user-plus"></i> <strong>Team-Based Learning:</strong>
   <i class="fa-solid fa-user"></i> iRAT (individual readiness) &nbsp;·&nbsp;
   <i class="fa-solid fa-users"></i> tRAT (team readiness) &nbsp;·&nbsp;
   <i class="fa-solid fa-users"></i> tAPP (team application) &nbsp;·&nbsp;
   <i class="fa-solid fa-user"></i> iREF (individual reflection)
 </p>
-<p style="text-align:center;margin-top:0.1em;font-size:14px;color:var(--muted);font-style:italic">
+<p style="text-align:center;margin-top:0.05em;margin-bottom:0;font-size:13px;color:var(--muted);font-style:italic">
   <i class="fa-solid fa-shuffle"></i> <strong>Flipped classroom</strong> &nbsp;·&nbsp;
-  <i class="fa-solid fa-repeat"></i> <strong>Iterative modules</strong> leading into capstone
+  <i class="fa-solid fa-repeat"></i> <strong>Iterative modules</strong> leading into capstone &nbsp;·&nbsp;
+  <i class="fa-solid fa-circle-info"></i> iRAT/tRAT use is slightly unconventional
 </p>
 <aside class="notes">
-<p>The course combines TBL with iterative project work via PBL.</p>
-<p>Students prepare individually before class, and class time is used for discussion and guided project work.</p>
-<p>iRAT = individual readiness assurance test tRAT = team readiness assurance test tAPP = team application iREF = individual reflection</p>
-<p>The capstone brings all prior work together — students revisit and refine previous analyses rather than starting fresh.</p>
+<p>Every module follows the same rhythm: <strong>prepare → align → apply → reflect</strong> — this is exactly what students will meet in the workplace as the <strong>Scrum process</strong>: sprint planning, sprint, retrospective. The course structure itself is professional practice.</p>
+<ul>
+<li><strong>iRAT / tRAT</strong>: readiness checks — everyone arrives prepared</li>
+<li><strong>tAPP</strong>: team applies to the shared project — where the real work happens</li>
+<li><strong>iREF</strong>: individual reflection — what changed, what you’d do differently</li>
+<li>After all modules, a <strong>mini-capstone</strong> bridges to the final capstone — which is not a new project but a revisit and refinement of everything that came before</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -293,45 +298,19 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="assessment-as-development-core-mechanism" class="slide level2">
-<h2>Assessment as development <span class="slide-subtitle"><em>Core mechanism</em></span></h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-list-check fa-fw box-icon"></i></div><div class="fa-card-body"><h3>One rubric, many iterations</h3><p>same assessment rubric reused across all modules and the capstone</p><ul class="fa-card-list"><li>analytical soundness</li><li>transparency</li><li>reproducibility</li><li>stakeholder relevance</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-forward fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Developmental shift</h3><p>feedback is <em class="emph">carried forward</em> — not reset between tasks</p></div></div></div></div>
+<section id="assessment-as-development" class="slide level2">
+<h2>Assessment as development</h2>
+<p><span class="slide-subtitle"><em>Core mechanism</em></span></p>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-list-check fa-fw box-icon"></i></div><div class="fa-card-body"><h3>One rubric, many iterations</h3><p>same assessment rubric reused across all modules and the capstone</p><ul class="fa-card-list"><li>analytical soundness</li><li>transparency</li><li>reproducibility</li><li>stakeholder relevance</li></ul></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-forward fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Developmental shift</h3><p>feedback is <em class="emph">carried forward</em> — not reset between tasks</p></div></div></div></div>
 <p><span class="lean-in">Standards fixed; performance expectations scaled during the learning phase.</span></p>
 <aside class="notes">
-<p>A key mechanism is how expectations are made explicit.</p>
-<p>From the beginning, students are shown the final rubric — so they know what high-quality work looks like.</p>
-<p>However, during the learning phase, assessment is scaled.</p>
-<p>So instead of grading against the final standard, work is normalized to what counts as “very good.”</p>
-<p>This signals clearly: this is what is expected for the final project.</p>
-<p>It also helps students prioritize their effort — they can identify what needs to be improved and revisit earlier work.</p>
-<p>So the rubric is not just used for grading — it becomes a tool for guiding development over time.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="accumulated-feedback" class="slide level2">
-<h2>Accumulated feedback</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-code-pull-request fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Pull Requests as assessment architecture</h3><p>changes are proposed, reviewed, discussed, and integrated — or explicitly deferred</p></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-repeat fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Structured accumulation</h3><ul class="fa-card-list"><li>same rubric reused</li><li>prior feedback revisited</li><li>unresolved issues explicitly carried forward</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-toolbox fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Enabled by tooling</h3><p>version control and persistent work traces via GitHub</p></div></div></div></div>
-<aside class="notes">
-<p>In practice, this is implemented through pull requests.</p>
-<p>Each piece of work is proposed, reviewed, discussed, and then either accepted or deferred.</p>
-<p>So instead of submitting assignments and moving on, the work remains open and revisitable.</p>
-<p>If an issue is raised and not resolved, it stays visible.</p>
-<p>That means later work is evaluated in light of earlier feedback.</p>
-<p>Students cannot simply move on — they have to revisit and improve.</p>
-<p>Because the same rubric is reused, I can also directly see what has changed — and whether earlier issues have been addressed.</p>
-<p>So assessment becomes more focused, and grading is faster because I am not re-evaluating everything from scratch.</p>
+<p>Students see the <strong>final rubric from day one</strong> — the standard doesn’t change, but expectations are <strong>scaled</strong> during the learning phase.</p>
+<ul>
+<li>In practice this means <strong>pull requests</strong>: changes proposed, reviewed, integrated — or explicitly deferred</li>
+<li>Unresolved issues <strong>stay visible</strong> across submissions — nothing disappears</li>
+<li>Same rubric reused → <strong>grading is faster</strong>; I can see exactly what changed</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -346,15 +325,20 @@
 </section>
 <section id="evolving-feedback" class="slide level2">
 <h2>Evolving feedback</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 3;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-chalkboard-user fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Instructor</h3><ul class="fa-card-list"><li>method</li><li>implementation</li></ul></div></div>
-<div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry partner</h3><ul class="fa-card-list"><li>domain relevance</li><li>decision context</li></ul></div></div>
-<div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-user fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Student</h3><ul class="fa-card-list"><li>knowledge transfer through PRs</li><li>defending decisions</li><li>critiquing peer work</li></ul></div></div></div></div>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 2;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-clock fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Progression over time</h3><ul class="fa-card-list"><li>align within teams</li><li>cross-team review</li><li>industry validation</li></ul></div></div>
-<div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-network-wired fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Audience shift</h3><p>from internal review to external scrutiny</p></div></div></div></div>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 3;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-chalkboard-user fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Instructor</h3><ul class="fa-card-list"><li>method</li><li>implementation</li></ul></div></div>
+<div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry partner</h3><ul class="fa-card-list"><li>domain relevance</li><li>decision context</li></ul></div></div>
+<div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-user fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Student</h3><ul class="fa-card-list"><li>knowledge transfer through PRs</li><li>defending decisions</li><li>critiquing peer work</li></ul></div></div></div></div>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 2;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-clock fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Progression over time</h3><ul class="fa-card-list"><li>align within teams</li><li>cross-team review</li><li>industry validation</li></ul></div></div>
+<div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-network-wired fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Audience shift</h3><p>from internal review to external scrutiny</p></div></div></div></div>
 <aside class="notes">
-<p>Who gives feedback: - The instructor focuses on method and implementation. - The industry partner focuses on relevance and decision context. - And importantly, students themselves are a key part of the process. Through PRs, they engage in knowledge transfer — by defending their own work and critiquing others.</p>
-<p>When does the feedback evolve: - During the modules, the focus is on aligning within teams. - In the capstone, this expands to cross-team review. - And finally, the work is exposed to the industry partner.</p>
-<p>What this means is the audience widens: Feedback moves from internal to external and more critical scrutiny.</p>
+<p>Feedback comes from <strong>three sources</strong>, each looking at something different — and the <strong>audience widens deliberately</strong> over the semester.</p>
+<ul>
+<li><strong>Instructor</strong> → method and implementation</li>
+<li><strong>Industry</strong> → domain relevance and decision context</li>
+<li><strong>Students</strong> → defending their own decisions, critiquing peers</li>
+<li>Scrutiny increases: within team → cross-team → <strong>industry validation</strong></li>
+<li>Full technical implementation is <strong>tomorrow’s talk</strong></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -369,43 +353,20 @@
 </section>
 <section id="credibility-and-trust" class="slide level2">
 <h2>Credibility and trust</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-shield fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry threshold</h3><p>credibility is fragile: early issues can undermine trust in the entire result</p></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-clipboard-list fa-fw box-icon"></i></div><div class="fa-card-body"><h3>What is evaluated</h3><ul class="fa-card-list"><li>reproducibility</li><li>transparency</li><li>clear assumptions</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-lightbulb fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Shift in communication</h3><p>build trust first — then invite inspection</p></div></div></div></div>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-shield fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry threshold</h3><p>credibility is fragile: early issues can undermine trust in the entire result</p></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-clipboard-list fa-fw box-icon"></i></div><div class="fa-card-body"><h3>What is evaluated</h3><ul class="fa-card-list"><li>reproducibility</li><li>transparency</li><li>clear assumptions</li></ul></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-lightbulb fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Shift in communication</h3><p>build trust first — then invite inspection</p></div></div></div></div>
+<div class="lean-in">
+<p>Students are told to <strong>present to sell</strong> — then invite the partner to read the codebase if curious, and the final report if they want the full picture. <em>(The report is what I grade — the partner never needs to.)</em></p>
+</div>
 <aside class="notes">
-<p>As feedback moves from internal to external, the consequences change.</p>
-<p>In an earlier version of the course, students presented their work in a standard academic way.</p>
-<p>During one presentation, the industry partner identified an issue early in the analysis.</p>
-<p>Even though the rest of the work was reasonable, that early issue reduced trust in the entire result.</p>
-<p>So they did not engage further.</p>
-<p>This is what we mean by credibility being fragile.</p>
-<p>So we made a deliberate shift in how students communicate.</p>
-<p>The goal is to build trust first, so the audience is willing to engage more deeply.</p>
-<p>Because the full history is available, the work becomes traceable and reproducible.</p>
-<p>So credibility is not just claimed — it can be inspected.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="team-and-individual-accountability" class="slide level2">
-<h2>Team and individual accountability</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 2;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-users fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Team-level</h3><ul class="fa-card-list"><li>analytical quality</li><li>coherence</li><li>relevance</li></ul></div></div>
-<div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-user-check fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Individual-level</h3><ul class="fa-card-list"><li>visible artifacts</li><li>documented contributions</li><li>structured reflection</li></ul></div></div></div></div>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-compass-drafting fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Design goal</h3><p>accountability without fragmenting teamwork — designed into the course architecture, not added after the fact</p></div></div></div></div>
-<aside class="notes">
-<p>Another design challenge is balancing teamwork with individual accountability.</p>
-<p>The goal is not to split the work into isolated individual tasks, but to make individual contributions visible within the team context.</p>
-<p>This is enabled through the workflow we’ve introduced.</p>
-<p>Because all work is proposed, reviewed, and discussed, you can see who contributed what, how they engaged with feedback, and how their work evolved over time.</p>
-<p>So accountability comes from traceable contributions, not from separating the work.</p>
+<p>Let me give you a concrete example of why <strong>credibility matters</strong> more than you might expect.</p>
+<ul>
+<li>Our industry partner found <strong>one error</strong> early in a student presentation</li>
+<li>The rest of the work was solid — but they <strong>lost trust in all of it</strong> and stopped engaging</li>
+<li>That experience drove the shift: <strong>build trust first</strong>, then invite scrutiny</li>
+<li><strong>Reproducible workflows</strong> are how you make credibility visible — not just claimed</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -420,14 +381,17 @@
 </section>
 <section id="indicative-evidence" class="slide level2">
 <h2>Indicative evidence</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-user-graduate fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Students &amp; graduates</h3><ul class="fa-card-list"><li>high engagement without attendance requirements</li><li>transfer of reproducible workflows</li><li>stronger documentation practices</li></ul></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-building-columns fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Academic perspective</h3><p>more ambitious, student-driven projects</p></div></div></div>
-<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry perspective</h3><p>improved coherence and credibility; results could be implemented in practice</p></div></div></div></div>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-user-graduate fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Students &amp; graduates</h3><ul class="fa-card-list"><li>high engagement without attendance requirements</li><li>transfer of reproducible workflows</li><li>stronger documentation practices</li></ul></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-building-columns fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Academic perspective</h3><p>more ambitious, student-driven projects</p></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 1;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-industry fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Industry perspective</h3><p>improved coherence and credibility; results could be implemented in practice</p></div></div></div></div>
 <aside class="notes">
-<p>There is no formal attendance requirement in this course. However, compared to other courses I teach with the same student group, attendance and participation are noticeably higher.</p>
-<p>We also observe transfer. Students adopt reproducible workflows and stronger documentation practices, and continue to use them beyond the course.</p>
-<p>From the industry perspective, the outputs are more coherent and credible, and importantly, they can see how the results could be implemented in practice.</p>
-<p>So while this is not controlled evidence, the signal is consistent across students, graduates, and partners.</p>
+<p>This has only been run <strong>once</strong> — so take it as a <strong>design case</strong>, not a controlled study. But the early signal is <strong>promising across all three groups</strong>.</p>
+<ul>
+<li>Students: <strong>no attendance requirement</strong>, yet highest attendance of any course I teach this cohort</li>
+<li>Graduates: they <strong>transfer the workflows</strong> — reproducible practices and structured documentation, years later</li>
+<li>Industry: outputs are <strong>more coherent and usable</strong> — results that could actually be implemented</li>
+<li>Personally — this is the <strong>most enjoyable course I teach</strong>. I’m just a <strong>facilitator</strong>; the students do the work. They’re also the cohort most likely to knock on my door for advice — that says something.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -440,16 +404,22 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="what-students-must-learn-to-handle" class="slide level2">
-<h2>What students must learn to handle</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-bolt fa-fw box-icon"></i></div><div class="fa-card-body"><h3>What becomes visible</h3><p>the design makes certain challenges explicit</p><ul class="fa-card-list"><li>giving and receiving critical feedback</li><li>making work visible and reviewable</li><li>managing workload in a structured workflow</li></ul></div></div></div></div>
+<section id="what-this-design-makes-visible" class="slide level2">
+<h2>What this design makes visible</h2>
+<p><span class="slide-subtitle">Transferable principles for CDIO-aligned, industry-engaged courses.</span></p>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 3;"><div class="fa-card-item hi-teal"><div class="fa-card-icon"><i class="fa-solid fa-rotate-left fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Sustained context</h3><p>one domain, all semester — depth over breadth</p></div></div>
+<div class="fa-card-item hi-teal"><div class="fa-card-icon"><i class="fa-solid fa-arrows-rotate fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Assessment as iteration</h3><p>same rubric, feedback carried forward — not reset</p></div></div>
+<div class="fa-card-item hi-teal"><div class="fa-card-icon"><i class="fa-solid fa-eye fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Visible contributions</h3><p>accountability without fragmenting the team</p></div></div></div>
+<div class="fa-card-row" style="--card-enum-cols: 3;"><div class="fa-card-item hi-teal"><div class="fa-card-icon"><i class="fa-solid fa-users fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Widening audience</h3><p>from internal review to industry scrutiny</p></div></div>
+<div class="fa-card-item hi-teal"><div class="fa-card-icon"><i class="fa-solid fa-layer-group fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Accumulated feedback</h3><p>unresolved issues stay visible across submissions</p></div></div>
+<div class="fa-card-item hi-teal"><div class="fa-card-icon"><i class="fa-solid fa-screwdriver-wrench fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Tooling as support</h3><p>design comes first — tools enable it</p></div></div></div></div>
 <aside class="notes">
-<p>What becomes clear with this design is not just improved outcomes — but also the challenges students need to learn to handle.</p>
-<p>Giving and receiving critical feedback: Students are often hesitant to critique peers, but this becomes a central part of the workflow.</p>
-<p>Making work visible: Everything is open to review — which creates accountability, but also requires students to articulate and justify their decisions.</p>
-<p>Managing workload: The structure introduces overhead, and students feel that early on.</p>
-<p>But that structure is also what enables iteration, feedback, and improvement.</p>
-<p>So the point is not to remove these challenges. They are a direct consequence of making the work visible — and part of what students need to learn to navigate.</p>
+<p>These six principles apply beyond <strong>Business Intelligence</strong> — the domain matters less than the design.</p>
+<ul>
+<li>Students often find this course <strong>uncomfortable in the moment</strong> — but graduates tell me it’s where they <strong>learned the most</strong>, because of the hands-on experience</li>
+<li>They see it when applying for jobs: the skills are real and they know it</li>
+<li>Critical feedback, visible work, structured workflow: better to meet them first <strong>in a course</strong> than on the job</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -462,97 +432,59 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="what-this-design-does" class="slide level2">
-<h2>What this design does</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 1;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-compass-drafting fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Transferable principles</h3><p>for CDIO-aligned, industry-engaged courses</p><ul class="fa-card-list"><li>sustained industry context — no repeated onboarding</li><li>assessment drives iteration, not just evaluation</li><li>contributions are visible and reviewable</li><li>feedback accumulates across the course</li><li>students adapt to different audiences</li><li>tooling supports — but does not define — the design</li></ul></div></div></div></div>
-<aside class="notes">
-<p>This can be summarized in a few key design choices.</p>
-<p>A sustained industry context — so students build depth instead of repeatedly onboarding.</p>
-<p>Assessment is used to drive iteration, not just to evaluate final outputs.</p>
-<p>Contributions are made visible and reviewable, which supports accountability without fragmenting teamwork.</p>
-<p>Feedback accumulates across the course, so students revisit and improve earlier work.</p>
-<p>And finally, students learn to adapt their work to different audiences — academic and industry.</p>
-<p>The tooling supports this, but the key contribution is the alignment between learning and professional practice.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="limitations-and-future-directions" class="slide level2">
-<h2>Limitations and future directions</h2>
-<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 2;"><div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-lock fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Current limitations</h3><ul class="fa-card-list"><li>depends on student readiness</li><li>scalability considerations</li><li>domain-specific transferability</li></ul></div></div>
-<div class="card fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-screwdriver-wrench fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Design refinements</h3><ul class="fa-card-list"><li>earlier preparation for professional tooling</li><li>improved stakeholder interaction</li><li>structured team-building to accelerate trust</li><li>scaling across courses and partners</li></ul></div></div></div></div>
-<aside class="notes">
-<p>This is a design-oriented case — not a controlled study.</p>
-<p>It depends on student readiness, and there is some initial overhead.</p>
-<p>Early in the semester, students often experience the workload as heavy. But later they consistently describe this as one of the most valuable parts of their studies.</p>
-<p>So there is a clear shift from short-term effort to long-term value.</p>
-<p>Scaling needs to be considered carefully. At the current size, it is manageable.</p>
-<p>And one ongoing refinement is strengthening the initial phase — giving students more time to build trust, understand the data, and align as a team before introducing more advanced methods.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="questions" class="slide level2">
+<section id="questions" class="slide level2 focus-slide">
 <h2>Questions?</h2>
+<!-- ── Backup slide ─────────────────────────────────────── -->
 <div class="two-col">
-<div class="col">
+<div>
 <p><img data-src="include/vr2.jpg" class="contact-photo"></p>
 </div>
-<div class="col">
+<div>
 <div class="contact-card">
-  <div class="contact-card-row">
-    <i class="fa-solid fa-envelope fa-fw"></i>
-    <a href="mailto:helgaingim@hi.is">helgaingim@hi.is</a>
-  </div>
-  <div class="contact-card-row">
-    <i class="fa-solid fa-phone fa-fw"></i>
-    <span>+354 525-4630</span>
-  </div>
-  <div class="contact-card-row">
-    <i class="fa-solid fa-building-columns fa-fw"></i>
-    <span>VR-II, University of Iceland</span>
-  </div>
-  <div class="contact-card-row">
-    <i class="fa-brands fa-orcid fa-fw"></i>
-    <a href="https://orcid.org/0000-0002-2780-3546" target="_blank">0000-0002-2780-3546</a>
-  </div>
-  <div class="contact-card-row">
-    <i class="fa-brands fa-linkedin fa-fw"></i>
-    <a href="https://linkedin.com/in/helgaingimundardottir" target="_blank">helgaingimundardottir</a>
-  </div>
-  <div class="contact-card-row">
-    <i class="fa-brands fa-github fa-fw"></i>
-    <a href="https://github.com/tungufoss" target="_blank">@tungufoss</a>
+  <div class="contact-card-name">Dr. Helga Ingimundardóttir</div>
+  <div class="contact-card-rows">
+    <div class="contact-card-row"><i class="fa-solid fa-envelope"></i> <a href="mailto:helgaingim@hi.is">helgaingim@hi.is</a></div>
+    <div class="contact-card-row"><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/0000-0002-2780-3546">0000-0002-2780-3546</a></div>
+    <div class="contact-card-row"><i class="fa-brands fa-github"></i> <a href="https://github.com/tungufoss">tungufoss</a></div>
+    <div class="contact-card-row"><i class="fa-solid fa-building-columns"></i> University of Iceland</div>
   </div>
 </div>
 
 </div>
 </div>
 <aside class="notes">
-<p>This brings us back to the original problem.</p>
-<p>The issue was not student ability — it was that the work was not credible or usable in context.</p>
-<p>What this case shows is that professional competence does not emerge by itself.</p>
-<p>It requires making expectations explicit — especially around credibility, trust, and use.</p>
-<p>Assessment and feedback are the mechanisms that make this visible.</p>
-<p>When feedback accumulates, and when students must respond to different audiences, they begin to align their work with real practice.</p>
-<p>So the contribution is not a specific tool or method.</p>
-<p>It is showing how assessment and feedback can be used to align learning with professional expectations.</p>
+<p>I’m happy to take questions — and if <strong>limitations</strong> come up: yes, it depends on <strong>student readiness</strong>, it scales to around <strong>15 students</strong>, and domain transferability is still open.</p>
+<ul>
+<li>Active refinement: <strong>strengthen the initial phase</strong> — more time to build trust before methods get complex</li>
+<li>Tomorrow, <strong>June 24 at 1pm</strong> — Session 8B: Learning Environments, Labs and Simulations — the technical side: <em>“Using Pull Requests to Make Collaboration Visible”</em></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="team-and-individual-accountability" class="slide level2">
+<h2>Team and individual accountability</h2>
+<div class="fa-card"><div class="fa-card-row" style="--card-enum-cols: 2;"><div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-users fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Team-level</h3><ul class="fa-card-list"><li>analytical quality</li><li>coherence</li><li>relevance</li></ul></div></div>
+<div class="fa-card-item"><div class="fa-card-icon"><i class="fa-solid fa-user-check fa-fw box-icon"></i></div><div class="fa-card-body"><h3>Individual-level</h3><ul class="fa-card-list"><li>visible artifacts</li><li>documented contributions</li><li>structured reflection</li></ul></div></div></div></div>
+<div class="statement">
+<p>Design goal: <strong>accountability without fragmenting teamwork</strong> — designed into the course architecture, not added after the fact.</p>
+</div>
+<aside class="notes">
+<p>The classic tension is <strong>teamwork versus individual accountability</strong> — and the usual fix of splitting tasks into isolated pieces breaks collaboration.</p>
+<ul>
+<li>Our approach: keep the team together but make <strong>contributions visible</strong></li>
+<li>PRs show who did what, how they engaged with feedback, how their thinking evolved</li>
+<li><strong>Accountability designed in</strong> — not bolted on after the fact</li>
+<li>Full detail in tomorrow’s talk</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -783,6 +715,16 @@
       });
     </script>
     <script src="scripts/countdown.js"></script>
+    <script>
+    // Hide footer/logo when rendered inside the RevealJS speaker-notes receiver iframe
+    if (window.location.search.includes('receiver') || window.location.hash.includes('receiver')) {
+      document.documentElement.classList.add('speaker-receiver');
+    }
+    </script>
+    <style>
+    html.speaker-receiver .reveal .footer,
+    html.speaker-receiver .reveal .slide-logo { display: none !important; }
+    </style>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
