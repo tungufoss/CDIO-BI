@@ -8,16 +8,15 @@ presenters:
   - name: "Dr. Helga Ingimundardóttir"
     hi-username: "helgaingim"
     orcid: "0000-0002-2780-3546"
+    github: "tungufoss"
 subtitle-position: below
 event-meta: "22<sup>nd</sup> International CDIO Conference"
 event-date: "June 23<sup>rd</sup>, 2026"
 format:
   revealjs:
-    theme: white
+    theme: styles/hi.scss
     css:
-      - styles/colors.css
-      - styles/hi26-reveal.css
-      - styles/cdio2026.css
+      - styles/watermark.css
     filters:
       - _extensions/hi-title/hi-title.lua
       - _extensions/card-enum/card-enum.lua
@@ -36,6 +35,14 @@ format:
 
 {{< hi-title >}}
 
+::: {.notes}
+I'm **Helga Ingimundardóttir** from the **University of Iceland** — this is my first time at CDIO, and I'm presenting **twice this week**.
+
+- **Today**: *why* we redesigned and what the design looks like
+- **Tomorrow** (June 24): *how* — pull requests as assessment infrastructure
+- Relevant if you do **industry-engaged** or **project-based** courses
+:::
+
 ## Motivation
 
 ::: {.fa-card cols=1}
@@ -45,69 +52,32 @@ format:
 :::
 
 ::: {.notes}
-This work starts from a familiar gap.
+Everyone agrees academia should prepare students for professional practice — the question is **how to actually design for it**.
 
-Universities aim to prepare students for professional practice —
-but translating that into course design is not straightforward.
-
-At the same time, industry expectations are quite concrete.
-Work needs to be credible, reproducible, and usable.
-
-And these perspectives do not always align.
-
-So the question is not whether we value the same things —
-but how those values are actually operationalized in courses.
-:::
-
----
-
-## What prompted the redesign
-
-::: {.fa-card cols=1}
-- industry | **Observed in an industry-facing course** | | * industry partners valued collaboration — but would not use the results | * students reported a very heavy and uneven workload
-- circle-question | **Core question** | how do we design courses so that student work is \_authentic in practice\_, while still supporting \_meaningful learning\_?
-:::
-
-::: {.notes}
-This is not just a theoretical issue.
-
-In an earlier version of the course, we worked with an industry partner
-and asked how useful the student results were.
-
-They appreciated the collaboration —
-but they would not actually use the results.
-
-At the same time, students experienced the course as quite heavy
-and time-consuming.
-
-So the course was not fully working for either side.
-
-That leads to the core question:
-how do we design assessment so that the work is authentic in practice,
-while still supporting meaningful learning?
+- This isn't a **values** mismatch — it's a **design** mismatch
+- Industry needs work that is **credible, reproducible, decision-usable**
+- Our own course: the partner valued the collaboration but **would not use the results**; students found it **heavy and uneven**
+- Core question: how do we design so work is **authentic in practice** *and* **meaningful for learning**?
 :::
 
 ---
 
 ## Context: Business Intelligence
 
-::: {.fa-card cols=1}
+::: {.fa-card cols=2}
 - magnifying-glass-chart | **Overview** | | * 6 ECTS course | * advanced undergraduate and early graduate students | * 10–15 students, two teams
 - database | **What is BI?** | data-driven decision support | * data analysis | * systems integration | * communication to inform organizational decisions
-- bullseye | **Goal** | strengthen industrial relevance and professional competence
+:::
+
+::: {.statement}
+Goal: **strengthen industrial relevance and professional competence**
 :::
 
 ::: {.notes}
-The context is a Business Intelligence course.
+Business Intelligence is about **decision support** — not just producing correct results, but communicating **assumptions, limitations, and implications**.
 
-What matters here is that BI is not just about analysis —
-it is about decision support.
-
-So students are not only expected to produce correct analyses,
-but also to communicate assumptions, limitations, and implications.
-
-And importantly, this is done in collaboration with an industry partner,
-so the work is evaluated in a realistic context.
+- **6 ECTS**, advanced undergrad and early grad, **10–15 students** in two teams
+- Small enough for **sustained industry engagement** — that's the key
 :::
 
 ---
@@ -121,88 +91,67 @@ so the work is evaluated in a realistic context.
 :::
 
 ::: {.notes}
-An initial, relatively simple change addressed both concerns.
+The biggest single structural change was using **one dataset, one domain, all semester**.
 
-We moved to a single, persistent industry case across the semester.
-
-This reduces workload by removing repeated onboarding and allows students to build
-a deeper and more coherent understanding of the data and domain.
-
-So instead of producing isolated analyses,
-they develop work that evolves over time within a realistic setting.
-
-This creates the conditions for more meaningful and usable results.
+- No repeated onboarding — students build **depth** instead of breadth
+- Industry partner present at **problem framing → milestones → final evaluation**
+- That continuity is what creates conditions for **usable results**
 :::
 
 ---
 
 ## Design focus: LOUIS-guided
 
-::: {.fa-card cols=1}
-- key | **Design focus** | | * limited set of competences (LOUIS) | * sustained industry context | * iterative development toward capstone
+::: {.statement}
+Focus on a small set of competences within a sustained industry context.
 :::
 
 [[**LOUIS**](https://aurora-universities.eu/louis/) — Learning Outcomes in University for Impact on Society (Aurora University Network). Focus on a small set of competences (max 3).]{.lean-in}
 
-![](include/lcf-grid.svg){style="width:100%;max-height:420px;object-fit:contain;display:block;margin:auto"}
+![](include/lcf-grid.svg){style="width:100%;max-height:390px;object-fit:contain;display:block;margin:auto"}
 
 ::: {.notes}
-For this redesign, I attended a workshop on the LOUIS framework —
-Learning Outcomes in University for Impact on Society.
+To focus the redesign, I used the **LOUIS** framework — Learning Outcomes in University for Impact on Society — developed by the **Aurora University Network**, a European alliance of nine research universities of which the **University of Iceland is a member**. Aurora runs **faculty workshops** to help teachers embed these competences into their courses — which is exactly what I did.
 
-LOUIS is part of the Aurora University Network,
-and is intended to strengthen broader academic and personal competences
-alongside subject knowledge.
-
-A key takeaway from that workshop was to avoid spreading too thin —
-instead, focus on a small number of competences
-and make expectations explicit.
-
-So this redesign is directly informed by that work.
-
-LOUIS helped translate high-level competence goals
-into concrete learning outcomes that students can understand and act on.
+- Key workshop insight: **don't spread thin** — pick at most **three competences** and make expectations explicit
+- We chose: **Information literacy · Problem solving · Teamwork**
 :::
 
 ---
 
 ## Pedagogical structure
 
-![](include/course-flow.svg){width=100% style="display:block;margin:auto;max-height:560px"}
+![](include/course-flow.svg){width=100% style="display:block;margin:auto;max-height:420px"}
 
 ```{=html}
-<p style="text-align:center;margin-top:0.4em;font-size:14px;color:var(--muted);font-style:italic">
+<p style="text-align:center;margin-top:0.25em;margin-bottom:0;font-size:13px;color:var(--muted);font-style:italic">
   <i class="fa-solid fa-user-plus"></i> <strong>Team-Based Learning:</strong>
   <i class="fa-solid fa-user"></i> iRAT (individual readiness) &nbsp;·&nbsp;
   <i class="fa-solid fa-users"></i> tRAT (team readiness) &nbsp;·&nbsp;
   <i class="fa-solid fa-users"></i> tAPP (team application) &nbsp;·&nbsp;
   <i class="fa-solid fa-user"></i> iREF (individual reflection)
 </p>
-<p style="text-align:center;margin-top:0.1em;font-size:14px;color:var(--muted);font-style:italic">
+<p style="text-align:center;margin-top:0.05em;margin-bottom:0;font-size:13px;color:var(--muted);font-style:italic">
   <i class="fa-solid fa-shuffle"></i> <strong>Flipped classroom</strong> &nbsp;·&nbsp;
-  <i class="fa-solid fa-repeat"></i> <strong>Iterative modules</strong> leading into capstone
+  <i class="fa-solid fa-repeat"></i> <strong>Iterative modules</strong> leading into capstone &nbsp;·&nbsp;
+  <i class="fa-solid fa-circle-info"></i> iRAT/tRAT use is slightly unconventional
 </p>
 ```
 
 ::: {.notes}
-The course combines TBL with iterative project work via PBL.
+Every module follows the same rhythm: **prepare → align → apply → reflect** — this is exactly what students will meet in the workplace as the **Scrum process**: sprint planning, sprint, retrospective. The course structure itself is professional practice.
 
-Students prepare individually before class,
-and class time is used for discussion and guided project work.
-
-iRAT = individual readiness assurance test
-tRAT = team readiness assurance test
-tAPP = team application
-iREF = individual reflection
-
-The capstone brings all prior work together —
-students revisit and refine previous analyses
-rather than starting fresh.
+- **iRAT / tRAT**: readiness checks — everyone arrives prepared
+- **tAPP**: team applies to the shared project — where the real work happens
+- **iREF**: individual reflection — what changed, what you'd do differently
+- After all modules, a **mini-capstone** bridges to the final capstone — which is not a new project but a revisit and refinement of everything that came before
 :::
 
 ---
 
-## Assessment as development [_Core mechanism_]{.slide-subtitle}
+## Assessment as development
+
+[_Core mechanism_]{.slide-subtitle}
 
 ::: {.fa-card cols=1}
 - list-check | **One rubric, many iterations** | same assessment rubric reused across all modules and the capstone | * analytical soundness | * transparency | * reproducibility | * stakeholder relevance
@@ -212,55 +161,11 @@ rather than starting fresh.
 [Standards fixed; performance expectations scaled during the learning phase.]{.lean-in}
 
 ::: {.notes}
-A key mechanism is how expectations are made explicit.
+Students see the **final rubric from day one** — the standard doesn't change, but expectations are **scaled** during the learning phase.
 
-From the beginning, students are shown the final rubric —
-so they know what high-quality work looks like.
-
-However, during the learning phase, assessment is scaled.
-
-So instead of grading against the final standard,
-work is normalized to what counts as "very good."
-
-This signals clearly: this is what is expected for the final project.
-
-It also helps students prioritize their effort —
-they can identify what needs to be improved and revisit earlier work.
-
-So the rubric is not just used for grading —
-it becomes a tool for guiding development over time.
-:::
-
----
-
-## Accumulated feedback
-
-::: {.fa-card cols=1}
-- code-pull-request | **Pull Requests as assessment architecture** | changes are proposed, reviewed, discussed, and integrated — or explicitly deferred
-- repeat | **Structured accumulation** | | * same rubric reused | * prior feedback revisited | * unresolved issues explicitly carried forward
-- toolbox | **Enabled by tooling** | version control and persistent work traces via GitHub
-:::
-
-::: {.notes}
-In practice, this is implemented through pull requests.
-
-Each piece of work is proposed, reviewed, discussed, and then either accepted or deferred.
-
-So instead of submitting assignments and moving on,
-the work remains open and revisitable.
-
-If an issue is raised and not resolved, it stays visible.
-
-That means later work is evaluated in light of earlier feedback.
-
-Students cannot simply move on — they have to revisit and improve.
-
-Because the same rubric is reused,
-I can also directly see what has changed —
-and whether earlier issues have been addressed.
-
-So assessment becomes more focused,
-and grading is faster because I am not re-evaluating everything from scratch.
+- In practice this means **pull requests**: changes proposed, reviewed, integrated — or explicitly deferred
+- Unresolved issues **stay visible** across submissions — nothing disappears
+- Same rubric reused → **grading is faster**; I can see exactly what changed
 :::
 
 ---
@@ -279,20 +184,13 @@ and grading is faster because I am not re-evaluating everything from scratch.
 :::
 
 ::: {.notes}
-Who gives feedback:
-- The instructor focuses on method and implementation.
-- The industry partner focuses on relevance and decision context.
-- And importantly, students themselves are a key part of the process.
-  Through PRs, they engage in knowledge transfer —
-  by defending their own work and critiquing others.
+Feedback comes from **three sources**, each looking at something different — and the **audience widens deliberately** over the semester.
 
-When does the feedback evolve:
-- During the modules, the focus is on aligning within teams.
-- In the capstone, this expands to cross-team review.
-- And finally, the work is exposed to the industry partner.
-
-What this means is the audience widens:
-Feedback moves from internal to external and more critical scrutiny.
+- **Instructor** → method and implementation
+- **Industry** → domain relevance and decision context
+- **Students** → defending their own decisions, critiquing peers
+- Scrutiny increases: within team → cross-team → **industry validation**
+- Full technical implementation is **tomorrow's talk**
 :::
 
 ---
@@ -305,63 +203,20 @@ Feedback moves from internal to external and more critical scrutiny.
 - lightbulb | **Shift in communication** | build trust first — then invite inspection
 :::
 
-::: {.notes}
-As feedback moves from internal to external,
-the consequences change.
-
-In an earlier version of the course,
-students presented their work in a standard academic way.
-
-During one presentation, the industry partner identified
-an issue early in the analysis.
-
-Even though the rest of the work was reasonable,
-that early issue reduced trust in the entire result.
-
-So they did not engage further.
-
-This is what we mean by credibility being fragile.
-
-So we made a deliberate shift in how students communicate.
-
-The goal is to build trust first,
-so the audience is willing to engage more deeply.
-
-Because the full history is available,
-the work becomes traceable and reproducible.
-
-So credibility is not just claimed — it can be inspected.
-:::
-
----
-
-## Team and individual accountability
-
-::: {.fa-card cols=2}
-- users | **Team-level** | | * analytical quality | * coherence | * relevance
-- user-check | **Individual-level** | | * visible artifacts | * documented contributions | * structured reflection
-:::
-
-::: {.fa-card cols=1}
-- compass-drafting | **Design goal** | accountability without fragmenting teamwork — designed into the course architecture, not added after the fact
+::: {.lean-in}
+Students are told to **present to sell** — then invite the partner to read the codebase if curious, and the final report if they want the full picture. _(The report is what I grade — the partner never needs to.)_
 :::
 
 ::: {.notes}
-Another design challenge is balancing teamwork with individual accountability.
+Let me give you a concrete example of why **credibility matters** more than you might expect.
 
-The goal is not to split the work into isolated individual tasks,
-but to make individual contributions visible within the team context.
-
-This is enabled through the workflow we've introduced.
-
-Because all work is proposed, reviewed, and discussed,
-you can see who contributed what,
-how they engaged with feedback,
-and how their work evolved over time.
-
-So accountability comes from traceable contributions,
-not from separating the work.
+- Our industry partner found **one error** early in a student presentation
+- The rest of the work was solid — but they **lost trust in all of it** and stopped engaging
+- That experience drove the shift: **build trust first**, then invite scrutiny
+- **Reproducible workflows** are how you make credibility visible — not just claimed
 :::
+
+
 
 ---
 
@@ -374,129 +229,49 @@ not from separating the work.
 :::
 
 ::: {.notes}
-There is no formal attendance requirement in this course.
-However, compared to other courses I teach with the same student group,
-attendance and participation are noticeably higher.
+This has only been run **once** — so take it as a **design case**, not a controlled study. But the early signal is **promising across all three groups**.
 
-We also observe transfer.
-Students adopt reproducible workflows and stronger documentation practices,
-and continue to use them beyond the course.
-
-From the industry perspective,
-the outputs are more coherent and credible,
-and importantly, they can see how the results
-could be implemented in practice.
-
-So while this is not controlled evidence,
-the signal is consistent across students, graduates, and partners.
+- Students: **no attendance requirement**, yet highest attendance of any course I teach this cohort
+- Graduates: they **transfer the workflows** — reproducible practices and structured documentation, years later
+- Industry: outputs are **more coherent and usable** — results that could actually be implemented
+- Personally — this is the **most enjoyable course I teach**. I'm just a **facilitator**; the students do the work. They're also the cohort most likely to knock on my door for advice — that says something.
 :::
 
 ---
 
-## What students must learn to handle
+## What this design makes visible
 
-::: {.fa-card cols=1}
-- bolt | **What becomes visible** | the design makes certain challenges explicit | * giving and receiving critical feedback | * making work visible and reviewable | * managing workload in a structured workflow
+<span class="slide-subtitle">Transferable principles for CDIO-aligned, industry-engaged courses.</span>
+
+::: {.fa-card cols=3}
+- [hi-teal] rotate-left | **Sustained context** | one domain, all semester — depth over breadth
+- [hi-teal] arrows-rotate | **Assessment as iteration** | same rubric, feedback carried forward — not reset
+- [hi-teal] eye | **Visible contributions** | accountability without fragmenting the team
+- [hi-teal] users | **Widening audience** | from internal review to industry scrutiny
+- [hi-teal] layer-group | **Accumulated feedback** | unresolved issues stay visible across submissions
+- [hi-teal] screwdriver-wrench | **Tooling as support** | design comes first — tools enable it
 :::
 
 ::: {.notes}
-What becomes clear with this design
-is not just improved outcomes —
-but also the challenges students need to learn to handle.
+These six principles apply beyond **Business Intelligence** — the domain matters less than the design.
 
-Giving and receiving critical feedback:
-Students are often hesitant to critique peers,
-but this becomes a central part of the workflow.
-
-Making work visible:
-Everything is open to review —
-which creates accountability,
-but also requires students to articulate and justify their decisions.
-
-Managing workload:
-The structure introduces overhead,
-and students feel that early on.
-
-But that structure is also what enables
-iteration, feedback, and improvement.
-
-So the point is not to remove these challenges.
-They are a direct consequence of making the work visible —
-and part of what students need to learn to navigate.
+- Students often find this course **uncomfortable in the moment** — but graduates tell me it's where they **learned the most**, because of the hands-on experience
+- They see it when applying for jobs: the skills are real and they know it
+- Critical feedback, visible work, structured workflow: better to meet them first **in a course** than on the job
 :::
 
 ---
 
-## What this design does
+## Questions? {.focus-slide}
 
-::: {.fa-card cols=1}
-- compass-drafting | **Transferable principles** | for CDIO-aligned, industry-engaged courses | * sustained industry context — no repeated onboarding | * assessment drives iteration, not just evaluation | * contributions are visible and reviewable | * feedback accumulates across the course | * students adapt to different audiences | * tooling supports — but does not define — the design
-:::
-
-::: {.notes}
-This can be summarized in a few key design choices.
-
-A sustained industry context — so students build depth instead of repeatedly onboarding.
-
-Assessment is used to drive iteration, not just to evaluate final outputs.
-
-Contributions are made visible and reviewable,
-which supports accountability without fragmenting teamwork.
-
-Feedback accumulates across the course,
-so students revisit and improve earlier work.
-
-And finally, students learn to adapt their work
-to different audiences — academic and industry.
-
-The tooling supports this,
-but the key contribution is the alignment
-between learning and professional practice.
-:::
-
----
-
-## Limitations and future directions
-
-::: {.fa-card cols=2}
-- lock | **Current limitations** | | * depends on student readiness | * scalability considerations | * domain-specific transferability
-- screwdriver-wrench | **Design refinements** | | * earlier preparation for professional tooling | * improved stakeholder interaction | * structured team-building to accelerate trust | * scaling across courses and partners
-:::
-
-::: {.notes}
-This is a design-oriented case — not a controlled study.
-
-It depends on student readiness,
-and there is some initial overhead.
-
-Early in the semester,
-students often experience the workload as heavy.
-But later they consistently describe this
-as one of the most valuable parts of their studies.
-
-So there is a clear shift
-from short-term effort to long-term value.
-
-Scaling needs to be considered carefully.
-At the current size, it is manageable.
-
-And one ongoing refinement
-is strengthening the initial phase —
-giving students more time
-to build trust, understand the data, and align as a team
-before introducing more advanced methods.
-:::
-
----
-
-## Questions?
+<!-- ── Backup slide ─────────────────────────────────────── -->
 
 ::: {.two-col}
-::: {.col}
+::: {}
 ![](include/vr2.jpg){.contact-photo}
 :::
 
-::: {.col}
+::: {}
 ```{=html}
 {{< include partials/contact-card.html >}}
 ```
@@ -504,25 +279,30 @@ before introducing more advanced methods.
 :::
 
 ::: {.notes}
-This brings us back to the original problem.
+I'm happy to take questions — and if **limitations** come up: yes, it depends on **student readiness**, it scales to around **15 students**, and domain transferability is still open.
 
-The issue was not student ability —
-it was that the work was not credible or usable in context.
+- Active refinement: **strengthen the initial phase** — more time to build trust before methods get complex
+- Tomorrow, **June 24 at 1pm** — Session 8B: Learning Environments, Labs and Simulations — the technical side: *"Using Pull Requests to Make Collaboration Visible"*
+:::
 
-What this case shows
-is that professional competence does not emerge by itself.
+---
 
-It requires making expectations explicit —
-especially around credibility, trust, and use.
+## Team and individual accountability
 
-Assessment and feedback are the mechanisms that make this visible.
+::: {.fa-card cols=2}
+- users | **Team-level** | | * analytical quality | * coherence | * relevance
+- user-check | **Individual-level** | | * visible artifacts | * documented contributions | * structured reflection
+:::
 
-When feedback accumulates,
-and when students must respond to different audiences,
-they begin to align their work with real practice.
+::: {.statement}
+Design goal: **accountability without fragmenting teamwork** — designed into the course architecture, not added after the fact.
+:::
 
-So the contribution is not a specific tool or method.
+::: {.notes}
+The classic tension is **teamwork versus individual accountability** — and the usual fix of splitting tasks into isolated pieces breaks collaboration.
 
-It is showing how assessment and feedback
-can be used to align learning with professional expectations.
+- Our approach: keep the team together but make **contributions visible**
+- PRs show who did what, how they engaged with feedback, how their thinking evolved
+- **Accountability designed in** — not bolted on after the fact
+- Full detail in tomorrow's talk
 :::

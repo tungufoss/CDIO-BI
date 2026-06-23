@@ -26,6 +26,18 @@ quarto render slides.qmd
 
 Output: `index.html`
 
+To start a new deck from the same HI template:
+
+```bash
+quarto use template tungufoss/quarto-hi --no-prompt
+```
+
+For local development, this repository assumes `quarto-hi/` can sit next to the deck folder:
+
+```bash
+quarto use template ../quarto-hi --no-prompt
+```
+
 ### Structure
 
 | Path | Description |
@@ -41,7 +53,6 @@ Output: `index.html`
 | `_extensions/pause/` | Lua filter: animated pause shortcode |
 | `partials/header-includes.inc` | Font Awesome + Jost font CDN links |
 | `partials/body-after.inc` | Scripts injected after body |
-| `partials/contact-card.html` | Reusable contact card HTML |
 | `scripts/countdown.js` | Countdown timer script |
 | `include/lcf-grid.svg` | LOUIS competence framework grid |
 | `include/course-flow.svg` | Pedagogical structure diagram |

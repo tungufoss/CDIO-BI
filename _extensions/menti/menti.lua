@@ -22,8 +22,6 @@ function Pandoc(doc)
 
   io.stderr:write("[menti.lua] code='" .. MENTI_CODE .. "' url='" .. MENTI_DISPLAY_URL .. "'\n")
 
-  local STYLE_URL  = 'style="font-size:24px;font-weight:600;color:#5f5f5f;text-align:center;margin:0;"'
-  local STYLE_CODE = 'class="big-word" style="text-align:center;white-space:nowrap;display:block;"'
   local STYLE_LOGIN_CODE = 'class="menti-code"'
 
   doc = doc:walk({
@@ -38,9 +36,10 @@ function Pandoc(doc)
         end
 
         local panel = '<div class="menti-panel">' ..
-          '<img style="width:175px;height:175px;object-fit:contain;display:block;" src="' .. MENTI_QR .. '" alt="QR">' ..
-          '<div ' .. STYLE_URL  .. '>' .. MENTI_DISPLAY_URL .. '</div>' ..
-          '<div ' .. STYLE_CODE .. '>' .. tostring(MENTI_CODE) .. '</div>' ..
+          '<div class="menti-panel-url">' .. MENTI_DISPLAY_URL .. '</div>' ..
+          '<img class="menti-panel-qr" src="' .. MENTI_QR .. '" alt="QR">' ..
+          '<div class="menti-panel-url">' .. MENTI_DISPLAY_URL .. '</div>' ..
+          '<div class="menti-panel-code">' .. tostring(MENTI_CODE) .. '</div>' ..
           '</div>'
 
         return pandoc.Blocks { h, pandoc.RawBlock("html", panel) }
