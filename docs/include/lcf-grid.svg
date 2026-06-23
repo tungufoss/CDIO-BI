@@ -1,0 +1,65 @@
+<svg viewBox="0 0 584 260" xmlns="http://www.w3.org/2000/svg"
+     font-family="Jost, system-ui, sans-serif" font-size="12" text-anchor="middle">
+
+  <!-- Row 0 (center y=34) -->
+  <rect x="4"   y="4"   width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="73"  y="34"  dominant-baseline="middle">Civic engagement</text>
+
+  <rect x="146" y="4"   width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="215" y="34"  dominant-baseline="middle">Creative thinking</text>
+
+  <rect x="288" y="4"   width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="357" y="34"  dominant-baseline="middle">Critical thinking</text>
+
+  <rect x="430" y="4"   width="150" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="505" y="34"  dominant-baseline="middle">Ethical reasoning</text>
+
+  <!-- Row 1 (center y=98) -->
+  <rect x="4"   y="68"  width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="73"  y="98"  dominant-baseline="middle">Global learning</text>
+
+  <!-- HIGHLIGHTED: Information literacy -->
+  <rect x="146" y="68"  width="138" height="60" rx="4" fill="#10099F" stroke="#10099F" stroke-width="2"/>
+  <text x="215" y="90"  dominant-baseline="middle" font-weight="600" fill="#2DD2C0">Information</text>
+  <text x="215" y="106" dominant-baseline="middle" font-weight="600" fill="#2DD2C0">literacy</text>
+
+  <rect x="288" y="68"  width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="357" y="98"  dominant-baseline="middle">Inquiry &amp; analysis</text>
+
+  <rect x="430" y="68"  width="150" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="505" y="90"  dominant-baseline="middle">Integrative</text>
+  <text x="505" y="106" dominant-baseline="middle">learning</text>
+
+  <!-- Row 2 (center y=162) -->
+  <rect x="4"   y="132" width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="73"  y="154" dominant-baseline="middle">Intercultural</text>
+  <text x="73"  y="170" dominant-baseline="middle" font-size="11">knowledge &amp; competence</text>
+
+  <rect x="146" y="132" width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="215" y="154" dominant-baseline="middle">Foundations for</text>
+  <text x="215" y="170" dominant-baseline="middle">life-long learning</text>
+
+  <rect x="288" y="132" width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="357" y="162" dominant-baseline="middle">Oral communication</text>
+
+  <!-- HIGHLIGHTED: Problem solving -->
+  <rect x="430" y="132" width="150" height="60" rx="4" fill="#10099F" stroke="#10099F" stroke-width="2"/>
+  <text x="505" y="162" dominant-baseline="middle" font-weight="600" fill="#2DD2C0">Problem solving</text>
+
+  <!-- Row 3 (center y=226) -->
+  <rect x="4"   y="196" width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="73"  y="218" dominant-baseline="middle">Quantitative</text>
+  <text x="73"  y="234" dominant-baseline="middle">literacy</text>
+
+  <rect x="146" y="196" width="138" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="215" y="226" dominant-baseline="middle">Reading</text>
+
+  <!-- HIGHLIGHTED: Teamwork -->
+  <rect x="288" y="196" width="138" height="60" rx="4" fill="#10099F" stroke="#10099F" stroke-width="2"/>
+  <text x="357" y="226" dominant-baseline="middle" font-weight="600" fill="#2DD2C0">Teamwork</text>
+
+  <rect x="430" y="196" width="150" height="60" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1.2"/>
+  <text x="505" y="218" dominant-baseline="middle">Written</text>
+  <text x="505" y="234" dominant-baseline="middle">communication</text>
+
+</svg>

@@ -1,2 +1,7 @@
 .claude/
 quarto-preview*.log
+index.html
+slides_files/
+
+/.quarto/
+**/*.quarto_ipynb
