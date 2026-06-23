@@ -33,7 +33,7 @@ Ingimundardóttir, H. (2026). Designing authentic industry-engaged assessment fo
 
 ## Build
 
-**Slides:**
+**Slides** (output goes to `docs/index.html`, served by GitHub Pages from `/docs`):
 ```bash
 quarto render slides.qmd
 ```
