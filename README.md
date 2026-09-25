@@ -38,6 +38,8 @@ Ingimundardóttir, H. (2026). Designing authentic industry-engaged assessment fo
 quarto render slides.qmd
 ```
 
+The slides use the [HÍ Quarto theme](https://github.com/tungufoss/quarto-haskoli-islands-theme/releases/tag/v0.2.0) v0.2.0.
+
 **Paper** (XeLaTeX + biber):
 ```bash
 xelatex cdio2025-HelgaIngim-BI && biber cdio2025-HelgaIngim-BI && xelatex cdio2025-HelgaIngim-BI

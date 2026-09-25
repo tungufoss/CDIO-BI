@@ -12,25 +12,12 @@ presenters:
 subtitle-position: below
 event-meta: "22<sup>nd</sup> International CDIO Conference"
 event-date: "June 23<sup>rd</sup>, 2026"
+watermark: img/hi/hi_logo.svg
+favicon: img/hi/favicon.svg
 format:
-  revealjs:
-    theme: styles/hi.scss
-    css:
-      - styles/watermark.css
-    filters:
-      - _extensions/hi-title/hi-title.lua
-      - _extensions/card-enum/card-enum.lua
+  haskoli-islands-revealjs:
     logo: img/hi/hi_named_logo-en.svg
     footer: "22<sup>nd</sup> International CDIO Conference · Helga Ingimundardóttir · helgaingim@hi.is"
-    include-in-header: partials/header-includes.inc
-    include-after-body: partials/body-after.inc
-    slide-number: true
-    show-slide-number: speaker
-    controls: true
-    transition: none
-    background-transition: none
-    width: 1280
-    height: 720
 ---
 
 {{< hi-title >}}
